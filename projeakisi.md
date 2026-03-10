@@ -22,55 +22,17 @@
                    ### Artırılmış Gerçeklik Teknolojileri
 * Gereksinim Toplama ve Belgeleme Dokümanı
   
-* 1. Proje Tanımı    
->Bu projenin amacı, öğrencilerin öğrenme deneyimini geliştirmek için Artırılmış Gerçeklik (Augmented Reality – AR) teknolojisini kullanan bir mobil eğitim uygulaması geliştirmektir. 
-Uygulama sayesinde öğrenciler ders kitaplarında bulunan görselleri veya belirli işaretleyicileri (marker) mobil cihazlarının kamerası ile tarayarak bu görsellerin 3 boyutlu modellerini ve etkileşimli içeriklerini görüntüleyebilecektir. 
-Bu sayede öğrenciler; 
-- Soyut kavramları daha iyi anlayabilecek 
-- 3D modeller üzerinden konuları inceleyebilecek 
-- Etkileşimli öğrenme deneyimi yaşayacaktır 
-Örneğin: 
-Bir öğrenci ders kitabında bulunan güneş sistemi görselini mobil uygulama ile taradığında, ekranda 3 boyutlu güneş sistemi modeli görüntülenecek ve öğrenci gezegenleri inceleyebilecektir. 
-
-* 2. Projenin Amaçları 
->Projenin temel amaçları şunlardır: 
-- Öğrencilerin görsel ve etkileşimli öğrenme deneyimini artırmak 
-- Artırılmış gerçeklik teknolojisini eğitim alanında kullanmak 
-- Ders materyallerini daha anlaşılır hale getirmek 
-- Mobil cihazlar üzerinden erişilebilir bir öğrenme platformu oluşturmak
-
-* 3. Proje Kapsamı
->Bu proje kapsamında geliştirilecek sistem aşağıdaki özellikleri içerecektir: 
--Mobil AR uygulaması 
--Kamera ile nesne veya görsel tanıma 
--3 boyutlu model görüntüleme 
--Kullanıcı etkileşimi (model döndürme, yakınlaştırma vb.) 
--Temel kullanıcı arayüzü
-
->Proje kapsamında geliştirilmeyecek özellikler: 
--Karmaşık kullanıcı hesap sistemi 
--Çevrim içi veri yönetimi 
--Büyük ölçekli içerik yönetim sistemi 
-Bu proje eğitim amaçlı bir prototip olarak geliştirilecektir.
-
-* 4. Hedef Kullanıcılar 
->Bu sistemin hedef kullanıcıları şunlardır:
--Öğrenciler 
-Ders materyallerini inceleyen kullanıcılar 
--Öğretmenler 
-Eğitim içeriklerini sınıf ortamında kullanabilecek kişiler
-
-* 5. Kullanılacak Teknolojiler
+* 1. Kullanılacak Teknolojiler
 Bu proje üniversite 1. sınıf yazılım öğrencileri için uygun teknolojiler kullanılarak geliştirilecektir.
 
->5.1 Oyun Motoru 
+>1.1 Oyun Motoru 
 - Unity 2022 LTS 
 Sebebi: 
 AR geliştirme için yaygın kullanılır 
 Öğrenmesi kolaydır 
 Mobil uygulama geliştirmeye uygundur 
 
->5.2 Programlama Dili 
+>1.2 Programlama Dili 
 - C# 
 Unity içinde kullanılan ana programlama dilidir. 
 Kullanım amacı: 
@@ -78,7 +40,7 @@ Uygulama mantığını oluşturmak
 Kullanıcı etkileşimlerini yönetmek
 AR sahnelerini kontrol etmek 
 
->5.3 Artırılmış Gerçeklik Teknolojisi
+>1.3 Artırılmış Gerçeklik Teknolojisi
 -AR Foundation 
 Unity'nin resmi AR geliştirme kütüphanesidir. 
 Avantajları: 
@@ -91,18 +53,18 @@ Avantajları:
 -ARKit 
 -Apple tarafından geliştirilmiştir.
 
->5.4 3D Modelleme
+>1.4 3D Modelleme
 -Blender
 Kullanım amacı: 
 Eğitimde kullanılacak 3D modelleri oluşturmak 
 Modelleri optimize etmek
 
->5.5 Mobil Platform
+>1.5 Mobil Platform
 Proje aşağıdaki platformlar için geliştirilecektir: 
 Android (öncelikli) 
 iOS (opsiyonel) 
 
-* 6. Sistem Mimarisi
+* 2. Sistem Mimarisi
 Sistem aşağıdaki bileşenlerden oluşacaktır: 
 > Mobil Uygulama 
 Kullanıcının uygulamayı çalıştırdığı ana sistemdir.
@@ -116,7 +78,7 @@ Eğitim içeriklerinin üç boyutlu modellerini içerir.
 >Kullanıcı Arayüzü 
 Kullanıcı ile uygulama arasındaki etkileşimi sağlar.
 
-* 7. Fonksiyonel Gereksinimler
+* 3. Fonksiyonel Gereksinimler
 Fonksiyonel gereksinimler sistemin ne yapması gerektiğini tanımlar.
 >FR1 
 Kullanıcı uygulamayı mobil cihazında başlatabilmelidir. 
@@ -137,7 +99,7 @@ Kullanıcı uygulama menüsüne erişebilmelidir.
 >FR9 
 Uygulama farklı eğitim modellerini gösterebilmelidir.
 
-* 8. Fonksiyonel Olmayan Gereksinimler
+* 4. Fonksiyonel Olmayan Gereksinimler
 >Performans 
 Uygulama mobil cihazlarda akıcı çalışmalıdır. 
 Minimum: 30 FPS 
@@ -148,7 +110,7 @@ Android 10 ve üzeri cihazlarda çalışmalıdır.
 >Güvenlik 
 Uygulama kullanıcıdan sadece kamera erişim izni isteyecektir.
 
-* 9. Kullanıcı Hikayeleri (User Stories)
+* 5. Kullanıcı Hikayeleri (User Stories)
 Kullanıcı Hikayesi 1 
 -Bir öğrenci olarak ders kitabındaki bir görseli taramak istiyorum, çünkü konuyu 3 boyutlu olarak incelemek istiyorum.
 
@@ -161,7 +123,7 @@ Bir öğrenci olarak model üzerinde bilgi etiketlerini görmek istiyorum, çün
 Kullanıcı Hikayesi 4 
 -Bir öğrenci olarak uygulamayı kolay bir şekilde kullanmak istiyorum, çünkü hızlı bir şekilde öğrenmek istiyorum. 
 
-* 10. Test Gereksinimleri 
+* 6. Test Gereksinimleri 
 Projenin doğruluğunu kontrol etmek için aşağıdaki testler yapılacaktır. 
 Test 1 
 Kamera açılıyor mu? 
@@ -178,7 +140,7 @@ Model döndürülebiliyor mu?
 Test 5 
 Uygulama çökmeden çalışıyor mu? 
 
-* 11. Teslim Edilecek Çıktılar 
+* 7. Teslim Edilecek Çıktılar 
 >Proje sonunda aşağıdaki çıktılar teslim edilecektir: 
 >Artırılmış gerçeklik sahneleri 
 >Etkileşimli 3D modeller 
@@ -186,7 +148,7 @@ Uygulama çökmeden çalışıyor mu?
 >Test senaryoları 
 >Kullanıcı kılavuzu
 
-* 12. Proje Ekibi 
+* 8. Proje Ekibi 
 Proje ekibi aşağıdaki rollere ayrılacaktır: 
 >AR Geliştirici 
 Unity ve AR sistemlerini geliştirir. 
