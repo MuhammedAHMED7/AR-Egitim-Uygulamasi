@@ -17,10 +17,9 @@
 
 * **Burçin Ayyıldız:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
 
-* **Perihan Çelikoğlu:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
-  
-                   ### Artırılmış Gerçeklik Teknolojileri
-* Gereksinim Toplama ve Belgeleme Dokümanı
+
+* **Perihan Çelikoğlu:** ###* Gereksinim Toplama ve Belgeleme Dokümanı
+
   
 * 1. Kullanılacak Teknolojiler
 Bu proje üniversite 1. sınıf yazılım öğrencileri için uygun teknolojiler kullanılarak geliştirilecektir.
