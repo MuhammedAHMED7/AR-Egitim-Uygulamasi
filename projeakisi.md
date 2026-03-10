@@ -17,4 +17,144 @@
 
 * **Burçin Ayyıldız:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
 
-* **Peri Çelikoğlu:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
+* **Perihan Çelikoğlu:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
+  
+                   ### Artırılmış Gerçeklik Teknolojileri
+* Gereksinim Toplama ve Belgeleme Dokümanı
+  
+* 1. Kullanılacak Teknolojiler
+Bu proje üniversite 1. sınıf yazılım öğrencileri için uygun teknolojiler kullanılarak geliştirilecektir.
+
+>1.1 Oyun Motoru 
+- Unity 2022 LTS 
+Sebebi: 
+AR geliştirme için yaygın kullanılır 
+Öğrenmesi kolaydır 
+Mobil uygulama geliştirmeye uygundur 
+
+>1.2 Programlama Dili 
+- C# 
+Unity içinde kullanılan ana programlama dilidir. 
+Kullanım amacı: 
+Uygulama mantığını oluşturmak 
+Kullanıcı etkileşimlerini yönetmek
+AR sahnelerini kontrol etmek 
+
+>1.3 Artırılmış Gerçeklik Teknolojisi
+-AR Foundation 
+Unity'nin resmi AR geliştirme kütüphanesidir. 
+Avantajları: 
+-Hem Android hem iOS destekler 
+-ARCore ve ARKit ile uyumludur
+>>Android için 
+-ARCore 
+-Google tarafından geliştirilmiştir. 
+>>iOS için 
+-ARKit 
+-Apple tarafından geliştirilmiştir.
+
+>1.4 3D Modelleme
+-Blender
+Kullanım amacı: 
+Eğitimde kullanılacak 3D modelleri oluşturmak 
+Modelleri optimize etmek
+
+>1.5 Mobil Platform
+Proje aşağıdaki platformlar için geliştirilecektir: 
+Android (öncelikli) 
+iOS (opsiyonel) 
+
+* 2. Sistem Mimarisi
+Sistem aşağıdaki bileşenlerden oluşacaktır: 
+> Mobil Uygulama 
+Kullanıcının uygulamayı çalıştırdığı ana sistemdir.
+
+>AR Kamera Sistemi 
+Telefon kamerası ile gerçek dünyayı algılar ve sahneye 3D model yerleştirir. 
+
+>3D Model Sistemi 
+Eğitim içeriklerinin üç boyutlu modellerini içerir. 
+
+>Kullanıcı Arayüzü 
+Kullanıcı ile uygulama arasındaki etkileşimi sağlar.
+
+* 3. Fonksiyonel Gereksinimler
+Fonksiyonel gereksinimler sistemin ne yapması gerektiğini tanımlar.
+>FR1 
+Kullanıcı uygulamayı mobil cihazında başlatabilmelidir. 
+>FR2 
+Uygulama mobil cihazın kamerasına erişebilmelidir. 
+>FR3 
+Kullanıcı bir görseli veya işaretleyiciyi kameraya gösterdiğinde sistem bunu algılayabilmelidir. 
+>FR4 
+Algılanan görsel üzerine ilgili 3D model görüntülenebilmelidir. 
+>FR5 
+Kullanıcı 3D modeli döndürebilmelidir. 
+>FR6 
+Kullanıcı 3D modeli yakınlaştırıp uzaklaştırabilmelidir. 
+>FR7 
+Kullanıcı model üzerinde bilgi etiketlerini görüntüleyebilmelidir.
+>FR8 
+Kullanıcı uygulama menüsüne erişebilmelidir. 
+>FR9 
+Uygulama farklı eğitim modellerini gösterebilmelidir.
+
+* 4. Fonksiyonel Olmayan Gereksinimler
+>Performans 
+Uygulama mobil cihazlarda akıcı çalışmalıdır. 
+Minimum: 30 FPS 
+>Kullanılabilirlik 
+Arayüz basit ve anlaşılır olmalıdır. 
+>Uyumluluk 
+Android 10 ve üzeri cihazlarda çalışmalıdır. 
+>Güvenlik 
+Uygulama kullanıcıdan sadece kamera erişim izni isteyecektir.
+
+* 5. Kullanıcı Hikayeleri (User Stories)
+Kullanıcı Hikayesi 1 
+-Bir öğrenci olarak ders kitabındaki bir görseli taramak istiyorum, çünkü konuyu 3 boyutlu olarak incelemek istiyorum.
+
+Kullanıcı Hikayesi 2 
+-Bir öğrenci olarak 3D modeli döndürmek istiyorum, çünkü modelin farklı açılardan nasıl göründüğünü incelemek istiyorum. 
+
+-Kullanıcı Hikayesi 3 
+Bir öğrenci olarak model üzerinde bilgi etiketlerini görmek istiyorum, çünkü konuyu daha iyi anlamak istiyorum. 
+
+Kullanıcı Hikayesi 4 
+-Bir öğrenci olarak uygulamayı kolay bir şekilde kullanmak istiyorum, çünkü hızlı bir şekilde öğrenmek istiyorum. 
+
+* 6. Test Gereksinimleri 
+Projenin doğruluğunu kontrol etmek için aşağıdaki testler yapılacaktır. 
+Test 1 
+Kamera açılıyor mu? 
+
+Test 2 
+Marker algılanıyor mu? 
+
+Test 3 
+3D model doğru şekilde görüntüleniyor mu? 
+
+Test 4 
+Model döndürülebiliyor mu? 
+
+Test 5 
+Uygulama çökmeden çalışıyor mu? 
+
+* 7. Teslim Edilecek Çıktılar 
+>Proje sonunda aşağıdaki çıktılar teslim edilecektir: 
+>Artırılmış gerçeklik sahneleri 
+>Etkileşimli 3D modeller 
+>Mobil uygulama arayüzü 
+>Test senaryoları 
+>Kullanıcı kılavuzu
+
+* 8. Proje Ekibi 
+Proje ekibi aşağıdaki rollere ayrılacaktır: 
+>AR Geliştirici 
+Unity ve AR sistemlerini geliştirir. 
+>3D Model Tasarımcısı 
+Blender kullanarak 3D modeller oluşturur. 
+>Arayüz Geliştirici 
+Mobil uygulama arayüzünü tasarlar. 
+>Proje Analisti 
+Gereksinim dokümanını ve planlamayı hazırlar. 
