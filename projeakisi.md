@@ -116,14 +116,16 @@ Eksileri:
 •	Geliştirme karmaşıklığı yaratabilir
 ________________________________________
 📊 4. Teknik Karşılaştırma Tablosu
-Kriterler	Unity + AR Foundation	ARKit	ARCore	Vuforia	Unreal
-Mobil Uyum	⭐⭐⭐⭐	⭐⭐⭐⭐	⭐⭐⭐⭐	⭐⭐⭐	⭐⭐
-Platform Desteği	iOS + Android	iOS	Android	iOS + Android	iOS + Android
-Takip / İzleme	⭐⭐⭐⭐	⭐⭐⭐⭐⭐	⭐⭐⭐⭐⭐	⭐⭐⭐⭐⭐	⭐⭐⭐⭐
-3D Model Entegrasyonu	⭐⭐⭐⭐	⭐⭐⭐	⭐⭐⭐	⭐⭐	⭐⭐⭐⭐
-Performans	⭐⭐⭐⭐	⭐⭐⭐⭐⭐	⭐⭐⭐⭐⭐	⭐⭐⭐	⭐⭐
-Öğrenme Eğrisi	⭐⭐⭐	⭐⭐⭐	⭐⭐⭐	⭐⭐	⭐⭐
-Topluluk / Dökümantasyon	⭐⭐⭐⭐⭐	⭐⭐⭐⭐	⭐⭐⭐⭐	⭐⭐⭐	⭐⭐⭐⭐
+
+| Kriter | Unity + AR Foundation | ARKit | ARCore | Vuforia | Unreal |
+|------|----------------------|------|-------|--------|--------|
+| Mobil Uyum | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+| Platform Desteği | iOS + Android | iOS | Android | iOS + Android | iOS + Android |
+| Takip / İzleme | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| 3D Model Entegrasyonu | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
+| Performans | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+| Öğrenme Eğrisi | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
+| Topluluk / Dökümantasyon | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
 ________________________________________
 📌 5. Proje İçin Önerilen Teknoloji Yığını
 Ana Teknoloji
