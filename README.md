@@ -3,6 +3,18 @@
 Projenin amacı, eğitim materyallerini artırılmış gerçeklik (AR) teknolojisi ile zenginleştirerek daha interaktif bir öğrenme deneyimi sunmaktır.
 Öğrencilerin öğrenme deneyimini zenginleştirmek için artırılmış gerçeklik teknolojisini kullanan bir eğitim uygulaması geliştirilmesi. Uygulama, ders kitaplarındaki veya fiziksel ortamlardaki nesneleri canlandırarak öğrencilerin konuları daha iyi anlamalarına yardımcı olacaktır
 
+---
+
+## 👥 Proje Ekibi
+
+| İsim Soyisim | Rol / Görev |
+| :--- | :--- |
+| **Muhammed AHMED** | Proje Yöneticisi & AR Geliştirici |
+| **Shuja Ahmad Tariq** | Proje Analisti & Kapsam Tanımı |
+| **Ahmet Yaman** | Teknoloji Araştırmacısı (VR/AR) |
+| **Burçin Ayyıldız** | Geliştirme Ortamı Kurulumu |
+| **Peri Çelikoğlu** | Gereksinim Analisti & Belgeleme |
+
 
 ## 🛠️ Kullanılan Teknolojiler
 
