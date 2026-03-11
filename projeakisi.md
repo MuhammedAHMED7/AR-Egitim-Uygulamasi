@@ -254,7 +254,7 @@ ________________________________________
 
 ## **Burçin Ayyıldız:** Geliştirme Ortamı Kurulumu
 
-Projenin geliştirme ortamı Unity 2022.3 LTS kullanılarak oluşturulmuştur. Kod geliştirme için Visual Studio 2022, sürüm kontrolü için Git ve Github kullanılmıştır. Android cihazlarda test yapabilmek için Android SDK, NDK ve OpenJDK paketleri kurulmuştur. Artırılmış gerçeklik desteği için AR Foundation ve ARCore XR Plugin projeye eklenmiştir.
+Yazılmış olan rapor buraya eklenecektir(bu satırı sil)
 
 ## **Perihan Çelikoğlu:** Gereksinim Toplama ve Belgeleme Dokümanı
 
