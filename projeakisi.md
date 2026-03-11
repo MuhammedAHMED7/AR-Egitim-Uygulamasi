@@ -11,7 +11,90 @@
   * **Performans ve Maliyet:** Projemiz eğitim amaçlı bir prototip olduğundan ücretli sistemlerin zorunlu logo (filigran) kısıtlamalarından kaçınmak için tamamen ücretsiz olan bu mimari tercih edilmiştir. Ayrıca ARCore mobil cihazlarda minimum 30 FPS performansı sağlayacak şekilde optimize edilmiştir.
   * **Görsel İşaretleyici (Marker) Algılama:** Ders kitaplarındaki görsellerin kamera ile taranması ve üzerine 3 boyutlu eğitim modellerinin yerleştirilmesi işlemi, AR Foundation'ın sunduğu Image Tracking (Görsel İzleme) teknolojisi sayesinde yüksek doğrulukla gerçekleştirilebilmektedir.
 
-* **Shuja Ahmad Tariq:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
+* **Shuja Ahmad Tariq:**
+# 🎓 AR-Edu: Artırılmış Gerçeklik Destekli Eğitim Uygulaması
+
+## 📝 1. Proje Analizi ve Kapsam Tanımı
+
+### 1.1 Proje Özeti
+**AR-Edu Uygulaması**, geleneksel statik ders kitapları ile sürükleyici dijital öğrenme arasındaki boşluğu doldurmak için tasarlanmış yeni nesil bir pedagojik araçtır. **Artırılmış Gerçeklik (AR)** teknolojisini kullanan uygulama, 2D diyagramları etkileşimli 3D modellere dönüştürerek öğrencilerin soyut kavramları gerçek zamanlı olarak görselleştirmelerini sağlar.
+
+### 1.2 Genel Hedefler
+* **Bilişsel Gelişim:** Soyut konuların (örneğin moleküler yapılar, gezegen yörüngeleri) mekansal görselleştirmesini geliştirmek.
+* **Etkileşim:** Öğrenme sürecini oyunlaştırarak öğrenci motivasyonunu artırmak.
+* **Erişilebilirlik:** Pahalı fiziksel ekipmanlara ihtiyaç duymadan yüksek kaliteli laboratuvar benzeri deneyimler sunmak.
+* **Kalıcılık:** Uzun süreli bellek tutulumunu artırmak için "yaparak öğrenme" ilkesinden yararlanmak.
+
+### 1.3 Proje Kapsamı
+* **✅ Kapsam Dahilinde (Faz 1):**
+    * **Görüntü İzleme (Image Tracking):** Standart müfredat kitaplarındaki belirli "tetikleyici" görsellerin tanınması.
+    * **Etkileşimli 3D Modeller:** Kullanıcıların 3D varlıkları döndürme, yakınlaştırma ve etkileşime girme yeteneği.
+    * **Çoklu Platform Desteği:** Android ve iOS mobil cihazlar için ilk sürüm.
+    * **İçerik Kütüphanesi:** Üç temel ders için başlangıç desteği: **Biyoloji, Fizik ve Tarih.**
+    * **Çevrimdışı Mod:** İndirilen AR içeriklerini internet bağlantısı olmadan görüntüleme yeteneği.
+* **❌ Kapsam Dışında:**
+    * **VR Entegrasyonu:** Sanal Gerçeklik gözlükleri desteği V1.0 için planlanmamıştır.
+    * **Çok Oyunculu İşbirliği:** Birden fazla öğrenci için gerçek zamanlı paylaşımlı AR alanları.
+    * **İçerik Oluşturma Paneli:** Öğretmenlerin kendi 3D modellerini oluşturabilecekleri bir araç.
+
+---
+
+## 👥 2. Paydaş Analizi
+
+| Paydaş | Beklentiler ve İhtiyaçlar |
+| :--- | :--- |
+| **Öğrenciler** | Kullanıcı dostu arayüz, yüksek performanslı görseller ve eğlenceli etkileşimler. |
+| **Öğretmenler** | Resmi müfredatla uyum, ders planlarına kolay entegrasyon ve minimum kurulum süresi. |
+| **Veliler** | Eğitici değer, veri gizliliği ve orta segment akıllı telefonlarla uyumluluk. |
+| **Geliştiriciler** | Net API dokümantasyonu ve mobil performans için optimize edilmiş 3D varlıklar. |
+
+---
+
+## 🛠️ 3. Teknik Mimari
+
+### 3.1 Üst Düzey Sistem Mimarisi
+Uygulama, dosya boyutunu küçük tutmak ve içeriği dinamik yönetmek için **Modüler İstemci-Sunucu Mimarisini** takip eder.
+
+
+
+* **Frontend (Önyüz):** Unity 3D Motoru.
+* **AR Katmanı:** **AR Foundation** (ARKit ve ARCore için platformlar arası sarmalayıcı).
+* **Bulut Entegrasyonu:** Kullanıcı kimlik doğrulaması ve model meta verileri (Addressable Assets) için Firebase/AWS.
+
+### 3.2 3D Varlık İş Akışı (Asset Pipeline)
+Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon) optimizasyon iş akışı kullanılır.
+
+* **Dosya Formatları:**
+    * **Birincil:** `.GLB / .GLTF` (AR için endüstri standardı).
+    * **Üretim:** `.FBX` (Blender/Maya üzerinden).
+* **Optimizasyon Standartları:**
+    * **Poligon Sayısı:** Model başına maksimum 15.000 üçgen.
+    * **Doku Boyutu:** Atlaslar halinde paketlenmiş 1024x1024px.
+    * **Shaderlar:** Mobil cihazlar için optimize edilmiş "Lit" veya "Unlit" shaderlar.
+
+### 3.3 Temel Teknoloji Yığını
+* **Motor:** Unity 6 (2023 LTS veya daha yenisi).
+* **Programlama:** C# (.NET Standard 2.1).
+* **Versiyon Kontrolü:** Git + Git LFS (Büyük Dosya Desteği).
+
+---
+
+## 📊 4. Beklenen Sonuçlar ve Başarı Kriterleri
+* **Nicel:** AR destekli derslerde öğrenci başarı puanlarında %20 artış.
+* **Nitel:** Pilot gruptaki öğretmenlerin %80'inden "kullanım kolaylığı" konusunda olumlu geri bildirim.
+* **Performans:** Uygulama açılışından itibaren 10 saniyenin altında "İlk AR Deneyimi"; stabil 30+ FPS.
+
+---
+
+## 📂 5. Proje Yapısı (Depo Haritası)
+```text
+/assets             # 3D Modeller, Dokular ve Sesler
+/docs               # Kapsam, Teknik Şartname ve Araştırmalar
+/src                # Unity Proje Dosyaları
+  /Scripts          # C# Mantığı (Takip, UI, Etkileşimler)
+  /Prefabs          # Tekrar Kullanılabilir AR Nesneleri
+  /Scenes           # Ana Menü, Biyoloji Laboratuvarı, Fizik Laboratuvarı
+/tests              # Takip kararlılığı için birim testler
 
 * **Ahmet Yaman:** ##Sanal Gerçeklik Teknolojileri Araştırma Raporu
 🧭 1. Raporun Amacı
