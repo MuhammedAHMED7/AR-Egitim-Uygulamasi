@@ -96,7 +96,7 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
   * **Görsel İşaretleyici (Marker) Algılama:** Ders kitaplarındaki görsellerin kamera ile taranması ve üzerine 3 boyutlu eğitim modellerinin yerleştirilmesi işlemi, AR Foundation'ın sunduğu Image Tracking (Görsel İzleme) teknolojisi sayesinde yüksek doğrulukla gerçekleştirilebilmektedir.
 
 
-## **Ahmet Yaman:** ##Sanal Gerçeklik Teknolojileri Araştırma Raporu
+## **Ahmet Yaman:** ## Sanal Gerçeklik Teknolojileri Araştırma Raporu
 🧭 1. Raporun Amacı
 Bu rapor, proje bağlamında kullanılabilecek başlıca artırılmış gerçeklik (AR) ve sanal gerçeklik (VR) teknolojilerini değerlendirmek, güçlü ve zayıf yönlerini analiz etmek ve en uygun teknolojik yol haritasını ortaya koymak için hazırlanmıştır.
 ________________________________________
@@ -252,11 +252,11 @@ ________________________________________
 
 
 
-## **Burçin Ayyıldız:** ##Geliştirme Ortamı Kurulumu
+## **Burçin Ayyıldız:** ## Geliştirme Ortamı Kurulumu
 
 Projenin geliştirme ortamı Unity 2022.3 LTS kullanılarak oluşturulmuştur. Kod geliştirme için Visual Studio 2022, sürüm kontrolü için Git ve Github kullanılmıştır. Android cihazlarda test yapabilmek için Android SDK, NDK ve OpenJDK paketleri kurulmuştur. Artırılmış gerçeklik desteği için AR Foundation ve ARCore XR Plugin projeye eklenmiştir.
 
-## **Perihan Çelikoğlu:** ###* Gereksinim Toplama ve Belgeleme Dokümanı
+## **Perihan Çelikoğlu:** ### * Gereksinim Toplama ve Belgeleme Dokümanı
 
   
 * 1. Kullanılacak Teknolojiler
