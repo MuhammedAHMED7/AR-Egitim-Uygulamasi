@@ -1,4 +1,4 @@
-## 1. Hafta 
+## 1. Hafta (5-12 Mart)
 
 * **Muhammed (Proje Yöneticisi):** ### Artırılmış Gerçeklik Teknolojileri Araştırma Raporu
   > **Araştırmayı Yapan:** Muhammed AHMED | **Durum:** Tamamlandı
@@ -13,9 +13,7 @@
 
 * **Shuja Ahmad Tariq:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
 
-* **Ahmet Yaman:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
-* Hazırlayan: Ahmet Yaman
-📊 Sanallaştırılmış Gerçeklik & AR Teknolojileri Karşılaştırma Raporu
+* **Ahmet Yaman:** ##Sanal Gerçeklik Teknolojileri Araştırma Raporu
 🧭 1. Raporun Amacı
 Bu rapor, proje bağlamında kullanılabilecek başlıca artırılmış gerçeklik (AR) ve sanal gerçeklik (VR) teknolojilerini değerlendirmek, güçlü ve zayıf yönlerini analiz etmek ve en uygun teknolojik yol haritasını ortaya koymak için hazırlanmıştır.
 ________________________________________
@@ -171,8 +169,9 @@ ________________________________________
 
 
 
-* **Burçin Ayyıldız:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
+* **Burçin Ayyıldız:** ##Geliştirme Ortamı Kurulumu
 
+Projenin geliştirme ortamı Unity 2022.3 LTS kullanılarak oluşturulmuştur. Kod geliştirme için Visual Studio 2022, sürüm kontrolü için Git ve Github kullanılmıştır. Android cihazlarda test yapabilmek için Android SDK, NDK ve OpenJDK paketleri kurulmuştur. Artırılmış gerçeklik desteği için AR Foundation ve ARCore XR Plugin projeye eklenmiştir.
 
 * **Perihan Çelikoğlu:** ###* Gereksinim Toplama ve Belgeleme Dokümanı
 
