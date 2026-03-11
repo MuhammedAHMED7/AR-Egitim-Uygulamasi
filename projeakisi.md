@@ -1,6 +1,6 @@
 ## 1. Hafta (5-12 Mart)
 
- ##Shuja Ahmad Tariq:** Proje Analizi ve Kapsam Tanımı
+ ## **Shuja Ahmad Tariq:** Proje Analizi ve Kapsam Tanımı
 
 ### 1.1 Proje Özeti
 **AR-Edu Uygulaması**, geleneksel statik ders kitapları ile sürükleyici dijital öğrenme arasındaki boşluğu doldurmak için tasarlanmış yeni nesil bir pedagojik araçtır. **Artırılmış Gerçeklik (AR)** teknolojisini kullanan uygulama, 2D diyagramları etkileşimli 3D modellere dönüştürerek öğrencilerin soyut kavramları gerçek zamanlı olarak görselleştirmelerini sağlar.
