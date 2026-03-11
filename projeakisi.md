@@ -73,14 +73,14 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
 ---
 
 ## 📂 5. Proje Yapısı (Depo Haritası)
-```text
-/assets             # 3D Modeller, Dokular ve Sesler
-/docs               # Kapsam, Teknik Şartname ve Araştırmalar
-/src                # Unity Proje Dosyaları
-  /Scripts          # C# Mantığı (Takip, UI, Etkileşimler)
-  /Prefabs          # Tekrar Kullanılabilir AR Nesneleri
-  /Scenes           # Ana Menü, Biyoloji Laboratuvarı, Fizik Laboratuvarı
-/tests              # Takip kararlılığı için birim testler
+
+          # 3D Modeller, Dokular ve Sesler
+          # Kapsam, Teknik Şartname ve Araştırmalar
+          # Unity Proje Dosyaları
+          # C# Mantığı (Takip, UI, Etkileşimler)
+          # Tekrar Kullanılabilir AR Nesneleri
+          # Ana Menü, Biyoloji Laboratuvarı, Fizik Laboratuvarı
+          # Takip kararlılığı için birim testler
 
 
 
