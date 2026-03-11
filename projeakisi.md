@@ -1,6 +1,6 @@
 ## 1. Hafta (5-12 Mart)
 
-* **Shuja Ahmad Tariq:** Proje Analizi ve Kapsam Tanımı
+* ##**Shuja Ahmad Tariq:** Proje Analizi ve Kapsam Tanımı
 
 ### 1.1 Proje Özeti
 **AR-Edu Uygulaması**, geleneksel statik ders kitapları ile sürükleyici dijital öğrenme arasındaki boşluğu doldurmak için tasarlanmış yeni nesil bir pedagojik araçtır. **Artırılmış Gerçeklik (AR)** teknolojisini kullanan uygulama, 2D diyagramları etkileşimli 3D modellere dönüştürerek öğrencilerin soyut kavramları gerçek zamanlı olarak görselleştirmelerini sağlar.
@@ -25,7 +25,7 @@
 
 ---
 
-## 👥 2. Paydaş Analizi
+### 👥 2. Paydaş Analizi
 
 | Paydaş | Beklentiler ve İhtiyaçlar |
 | :--- | :--- |
@@ -36,7 +36,7 @@
 
 ---
 
-## 🛠️ 3. Teknik Mimari
+### 🛠️ 3. Teknik Mimari
 
 ### 3.1 Üst Düzey Sistem Mimarisi
 Uygulama, dosya boyutunu küçük tutmak ve içeriği dinamik yönetmek için **Modüler İstemci-Sunucu Mimarisini** takip eder.
@@ -65,14 +65,14 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
 
 ---
 
-## 📊 4. Beklenen Sonuçlar ve Başarı Kriterleri
+### 📊 4. Beklenen Sonuçlar ve Başarı Kriterleri
 * **Nicel:** AR destekli derslerde öğrenci başarı puanlarında %20 artış.
 * **Nitel:** Pilot gruptaki öğretmenlerin %80'inden "kullanım kolaylığı" konusunda olumlu geri bildirim.
 * **Performans:** Uygulama açılışından itibaren 10 saniyenin altında "İlk AR Deneyimi"; stabil 30+ FPS.
 
 ---
 
-## 📂 5. Proje Yapısı (Depo Haritası)
+### 📂 5. Proje Yapısı (Depo Haritası)
 
           # 3D Modeller, Dokular ve Sesler
           # Kapsam, Teknik Şartname ve Araştırmalar
@@ -84,7 +84,7 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
 
 
 
-* **Muhammed (Proje Yöneticisi):** ### Artırılmış Gerçeklik Teknolojileri Araştırma Raporu
+##* **Muhammed (Proje Yöneticisi):** ### Artırılmış Gerçeklik Teknolojileri Araştırma Raporu
   > **Araştırmayı Yapan:** Muhammed AHMED | **Durum:** Tamamlandı
 
   Proje kapsamında kullanılacak Artırılmış Gerçeklik (AR) altyapısı için sektördeki çeşitli SDK'lar (Vuforia, EasyAR, AR Foundation) teknik açıdan incelenmiştir. Yapılan analizler ve Gereksinim Toplama ve Belgeleme Dokümanı doğrultusunda, projemizde Unity AR Foundation ve Android platformu için Google ARCore eklentisinin kullanılmasına karar verilmiştir.
@@ -96,7 +96,7 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
   * **Görsel İşaretleyici (Marker) Algılama:** Ders kitaplarındaki görsellerin kamera ile taranması ve üzerine 3 boyutlu eğitim modellerinin yerleştirilmesi işlemi, AR Foundation'ın sunduğu Image Tracking (Görsel İzleme) teknolojisi sayesinde yüksek doğrulukla gerçekleştirilebilmektedir.
 
 
-* **Ahmet Yaman:** ##Sanal Gerçeklik Teknolojileri Araştırma Raporu
+##* **Ahmet Yaman:** ##Sanal Gerçeklik Teknolojileri Araştırma Raporu
 🧭 1. Raporun Amacı
 Bu rapor, proje bağlamında kullanılabilecek başlıca artırılmış gerçeklik (AR) ve sanal gerçeklik (VR) teknolojilerini değerlendirmek, güçlü ve zayıf yönlerini analiz etmek ve en uygun teknolojik yol haritasını ortaya koymak için hazırlanmıştır.
 ________________________________________
@@ -252,11 +252,11 @@ ________________________________________
 
 
 
-* **Burçin Ayyıldız:** ##Geliştirme Ortamı Kurulumu
+##* **Burçin Ayyıldız:** ##Geliştirme Ortamı Kurulumu
 
 Projenin geliştirme ortamı Unity 2022.3 LTS kullanılarak oluşturulmuştur. Kod geliştirme için Visual Studio 2022, sürüm kontrolü için Git ve Github kullanılmıştır. Android cihazlarda test yapabilmek için Android SDK, NDK ve OpenJDK paketleri kurulmuştur. Artırılmış gerçeklik desteği için AR Foundation ve ARCore XR Plugin projeye eklenmiştir.
 
-* **Perihan Çelikoğlu:** ###* Gereksinim Toplama ve Belgeleme Dokümanı
+##* **Perihan Çelikoğlu:** ###* Gereksinim Toplama ve Belgeleme Dokümanı
 
   
 * 1. Kullanılacak Teknolojiler
