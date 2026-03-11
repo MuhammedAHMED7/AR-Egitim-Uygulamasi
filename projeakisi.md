@@ -14,6 +14,162 @@
 * **Shuja Ahmad Tariq:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
 
 * **Ahmet Yaman:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
+* Hazırlayan: Ahmet Yaman
+📊 Sanallaştırılmış Gerçeklik & AR Teknolojileri Karşılaştırma Raporu
+🧭 1. Raporun Amacı
+Bu rapor, proje bağlamında kullanılabilecek başlıca artırılmış gerçeklik (AR) ve sanal gerçeklik (VR) teknolojilerini değerlendirmek, güçlü ve zayıf yönlerini analiz etmek ve en uygun teknolojik yol haritasını ortaya koymak için hazırlanmıştır.
+________________________________________
+🎯 2. Değerlendirilen Teknolojiler / Araçlar
+Teknoloji	Kategori	Platform Desteği	Kullanım Alanı
+Unity + AR Foundation	AR/VR Geliştirme	iOS, Android	AR/VR Hibrit
+Unreal Engine AR/VR	AR/VR Geliştirme	iOS, Android	Yüksek Görsel Kalite
+ARKit	AR SDK	iOS	iPhone/iPad AR
+ARCore	AR SDK	Android	Android AR
+Vuforia	AR SDK	iOS, Android	Görsel Takip Odaklı AR
+Microsoft Mixed Reality	MR Platform	HoloLens, Windows	Gelişmiş MR
+Google VR / Cardboard	VR SDK	iOS, Android	Basit VR Deneyimleri
+Oculus SDK (Meta)	VR SDK	Quest/PC	VR Odaklı
+OpenXR	Standard API	Çoklu Cihaz	Evrensel VR/AR
+________________________________________
+🔍 3. AR / VR Teknolojilerinin Detaylı İncelemesi
+🎮 3.1 Unity + AR Foundation
+Kategori: AR/VR Geliştirme Framework’ü
+Öne Çıkan Özellikler:
+•	Hem ARKit hem ARCore’u tek bir API ile kullanabilme
+•	Unity Editor ile zengin sahne tasarımı
+•	3D model entegrasyonu ve animasyon desteği
+•	Mobil AR & VR deneyimlerinin aynı projede yönetimi
+Artıları:
+•	Kod tabanı tek — iOS & Android uyumlu
+•	Zengin topluluk & dökümantasyon
+•	AR ve VR’i birlikte destekleyebilme
+•	Mobil performans optimizasyonu kolay
+Eksileri:
+•	Büyük projelerde bellek yönetimi dikkat gerektirir
+•	AR Foundation’un ileri seviye takip kontrolü sınırlı olabiliyor
+Değerlendirme: Proje için en esnek ve en uygun çözüm.
+________________________________________
+🚀 3.2 Unreal Engine (AR/VR)
+Kategori: Geliştirme Motoru
+Öne Çıkan Özellikler:
+•	Yüksek görsel kalite, gerçekçi render
+•	Blueprint görsel programlama
+•	Advanced materyal ve ışıklandırma desteği
+Artıları:
+•	Photoreal görseller
+•	Blueprint ile hızlı prototipleme
+Eksileri:
+•	Mobil AR projelerinde performans zorlayabilir
+•	Geniş öğrenme eğrisi
+Değerlendirme: Görsel kalite öncelikli AR/VR projeleri için uygun.
+________________________________________
+🧠 3.3 ARKit (Apple)
+Kategori: iOS AR SDK
+Öne Çıkan Özellikler:
+•	Yüz takibi, yüz ifadeleri
+•	Işık haritalama
+•	Gerçek dünya fonksiyon takibi
+Artıları:
+•	iOS cihazlarda optimize AR
+•	Yüksek takip doğruluğu
+Eksileri:
+•	Sadece iOS
+________________________________________
+🤖 3.4 ARCore (Google)
+Kategori: Android AR SDK
+Öne Çıkan Özellikler:
+•	Hareket takibi
+•	Çevresel anlayış
+•	Yerleştirme yüzey tespiti
+Artıları:
+•	Android üzerinde güçlü AR
+•	Geniş cihaz desteği
+Eksileri:
+•	iOS üzerinde kullanılamaz
+________________________________________
+🔎 3.5 Vuforia
+Kategori: AR SDK
+Öne Çıkan Özellikler:
+•	Görsel hedef tanıma
+•	Kitap, nesne, resim takibi
+Artıları:
+•	Görsel nesne tanıma çok güçlü
+•	Fiziksel materyalleri takip etmede avantajlı
+Eksileri:
+•	Mobil AR deneyimi Unity AR Foundation kadar esnek değil
+________________________________________
+🕶 3.6 Microsoft Mixed Reality
+Kategori: MR Platform
+Öne Çıkan Özellikler:
+•	HoloLens desteği
+•	Gerçek dünya + hologram sentezi
+Artıları:
+•	Endüstriyel MR projelerinde güçlü
+Eksileri:
+•	Sadece HoloLens
+________________________________________
+🌐 3.7 OpenXR
+Kategori: Evrensel AR/VR API Standardı
+Artıları:
+•	Birden çok AR/VR cihazı tek çatı altında
+Eksileri:
+•	Geliştirme karmaşıklığı yaratabilir
+________________________________________
+📊 4. Teknik Karşılaştırma Tablosu
+
+| Kriter | Unity + AR Foundation | ARKit | ARCore | Vuforia | Unreal |
+|------|----------------------|------|-------|--------|--------|
+| Mobil Uyum | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+| Platform Desteği | iOS + Android | iOS | Android | iOS + Android | iOS + Android |
+| Takip / İzleme | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| 3D Model Entegrasyonu | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
+| Performans | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+| Öğrenme Eğrisi | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
+| Topluluk / Dökümantasyon | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+________________________________________
+📌 5. Proje İçin Önerilen Teknoloji Yığını
+Ana Teknoloji
+•	Unity + AR Foundation
+o	Hem iOS hem Android’de tek çözüm
+o	ARKit & ARCore entegrasyonu tek çatı altında
+o	3D model ve interaktif sahneler için güçlü
+Ek SDK / Araçlar
+Kullanım Amacı	Önerilen Teknoloji
+Nesne / Görsel Takibi	Vuforia
+Yüz Takibi (iOS)	ARKit Face Tracking
+3D Model Oluşturma	Blender / Maya
+UI Arayüz Geliştirme	Unity UI Toolkit
+Performans Optimizasyonu	Unity Profiler
+________________________________________
+🎓 6. Teknoloji Avantajları & Dezavantajları
+Unity + AR Foundation
+•	Avantaj: Tek projede çapraz platform, zengin eklenti desteği, öğrenmesi kolay
+•	Dezavantaj: İleri seviye izleme bazı özel SDK’larda daha güçlü olabilir
+ARKit & ARCore
+•	Avantaj: Yerel AR fonksiyonları, yüksek takip doğruluğu
+•	Dezavantaj: Tek platforma özel
+Vuforia
+•	Avantaj: Görsel hedef takibi mükemmel
+•	Dezavantaj: Genel AR Foundation kadar esnek değil
+Unreal
+•	Avantaj: Yüksek görsel kalite
+•	Dezavantaj: Mobil için ağır
+________________________________________
+📌 7. Özet Değerlendirme
+Kullanım Durumu	En Uygun Teknoloji
+Yüksek Performanslı Mobil AR	Unity + AR Foundation
+Gelişmiş Görsel Takip	Vuforia
+iOS Esaslı AR	ARKit
+Android Esaslı AR	ARCore
+VR Eğitim Deneyimleri	Oculus / OpenXR + Unity
+________________________________________
+🏁 8. Sonuç ve Tavsiyeler
+•	Projenin ana platformu olarak Unity + AR Foundation kullanılmalı.
+•	Görsel kitap öğeleri için Vuforia entegre edilebilir.
+•	iOS göz takibi veya özel yüz ifadeleri için ARKit Face Tracking kullanılabilir.
+•	3D nesneler için Blender ile özelleştirilmiş modeller üretilebilir.
+
+
 
 * **Burçin Ayyıldız:** Bu hafta yapılan araştırmalar ve görevler buraya eklenecektir.
 
