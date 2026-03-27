@@ -83,7 +83,7 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
           # Takip kararlılığı için birim testler
 
 
-   ## 👤 **Muhammed (Proje Yöneticisi):** Artırılmış Gerçeklik Teknolojileri Araştırma Raporu
+   ## 👤 **Muhammed AHMED (Proje Yöneticisi):** Artırılmış Gerçeklik Teknolojileri Araştırma Raporu
   > **Araştırmayı Yapan:** Muhammed AHMED | **Durum:** Tamamlandı
 
   Proje kapsamında kullanılacak Artırılmış Gerçeklik (AR) altyapısı için sektördeki çeşitli SDK'lar (Vuforia, EasyAR, AR Foundation) teknik açıdan incelenmiştir. Yapılan analizler ve Gereksinim Toplama ve Belgeleme Dokümanı doğrultusunda, projemizde Unity AR Foundation ve Android platformu için Google ARCore eklentisinin kullanılmasına karar verilmiştir.
