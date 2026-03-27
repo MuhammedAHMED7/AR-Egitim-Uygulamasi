@@ -83,7 +83,7 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
           # Takip kararlılığı için birim testler
 
 
-   ## **Muhammed (Proje Yöneticisi):** Artırılmış Gerçeklik Teknolojileri Araştırma Raporu
+   ## 👤 **Muhammed (Proje Yöneticisi):** Artırılmış Gerçeklik Teknolojileri Araştırma Raporu
   > **Araştırmayı Yapan:** Muhammed AHMED | **Durum:** Tamamlandı
 
   Proje kapsamında kullanılacak Artırılmış Gerçeklik (AR) altyapısı için sektördeki çeşitli SDK'lar (Vuforia, EasyAR, AR Foundation) teknik açıdan incelenmiştir. Yapılan analizler ve Gereksinim Toplama ve Belgeleme Dokümanı doğrultusunda, projemizde Unity AR Foundation ve Android platformu için Google ARCore eklentisinin kullanılmasına karar verilmiştir.
@@ -96,7 +96,7 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
 
 
 
-## **Ahmet Yaman:**  Sanal Gerçeklik Teknolojileri Araştırma Raporu
+## 👤 **Ahmet Yaman:**  Sanal Gerçeklik Teknolojileri Araştırma Raporu
 🧭 1. Raporun Amacı
 Bu rapor, proje bağlamında kullanılabilecek başlıca artırılmış gerçeklik (AR) ve sanal gerçeklik (VR) teknolojilerini değerlendirmek, güçlü ve zayıf yönlerini analiz etmek ve en uygun teknolojik yol haritasını ortaya koymak için hazırlanmıştır.
 ________________________________________
@@ -252,11 +252,11 @@ ________________________________________
 
 
 
-## **Burçin Ayyıldız:** Geliştirme Ortamı Kurulumu
+## 👤 **Burçin Ayyıldız:** Geliştirme Ortamı Kurulumu
 
 Projenin geliştirme ortamı Unity 2022.3 LTS kullanılarak oluşturulmuştur. Kod geliştirme için Visual Studio 2022, sürüm kontrolü için Git ve Github kullanılmıştır. Android cihazlarda test yapabilmek için Android SDK, NDK ve OpenJDK paketleri kurulmuştur. Artırılmış gerçeklik desteği için AR Foundation ve ARCore XR Plugin projeye eklenmiştir.
 
-## **Perihan Çelikoğlu:** Gereksinim Toplama ve Belgeleme Dokümanı
+## 👤 **Perihan Çelikoğlu:** Gereksinim Toplama ve Belgeleme Dokümanı
 
   
 * 1. Kullanılacak Teknolojiler
