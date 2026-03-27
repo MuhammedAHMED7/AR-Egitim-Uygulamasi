@@ -386,7 +386,7 @@ Uygulama çökmeden çalışıyor mu?
 >Kullanıcı kılavuzu
 
 * 8. Proje Ekibi 
-Proje ekibi aşağıdaki rollere ayrılacaktır: 
+Proje ekibi aşağıdaki rollere ayrılacaktır:
 >AR Geliştirici 
 Unity ve AR sistemlerini geliştirir. 
 >3D Model Tasarımcısı 
@@ -395,3 +395,6 @@ Blender kullanarak 3D modeller oluşturur.
 Mobil uygulama arayüzünü tasarlar. 
 >Proje Analisti 
 Gereksinim dokümanını ve planlamayı hazırlar. 
+
+## 2.Hafta (22-28 Mart)
+## 👤 **Perihan Çelikoğlu:** UI/UX Wireframe ve Arayüz Tasarımı
