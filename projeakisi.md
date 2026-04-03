@@ -401,13 +401,23 @@ Gereksinim dokümanını ve planlamayı hazırlar.
 Uygulamanın kullanıcı arayüzü ve kullanıcı deneyimi wireframe'lerinin çıkarıldı.
 
 ## 👤 **Perihan Çelikoğlu:** VR Ortamında Navigasyon ve Temel Etkileşim Mekaniklerinin Uygulanması
+Bu haftada yapılan görev buraya yapıştırılacak!!
 ## 👤 **Perihan Çelikoğlu:** VR Uygulamasında Kullanıcı Arayüzü İyileştirmeleri
+Bu haftada yapılan görev buraya yapıştırılacak!!
 
 ## 👤 **Burçin Ayyıldız:** Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma
+Bu haftada yapılan görev buraya yapıştırılacak!!
 ## 👤 **Burçin Ayyıldız:** AR/VR Projelerinde Performans Optimizasyonu
+Bu haftada yapılan görev buraya yapıştırılacak!!
+
 
 ## 👤 **Ahmet Yaman:** Sanal Gerçeklik Ortamında Çoklu Kullanıcı Desteği Entegrasyonu
+Bu haftada yapılan görev buraya yapıştırılacak!!
 ## 👤 **Ahmet Yaman:** Artırılmış Gerçeklik Uygulaması için Basit Bir Kullanıcı Arayüzü Tasarımı ve Entegrasyonu
+Bu haftada yapılan görev buraya yapıştırılacak!!
 
 ## 👤 **Shuja Ahmad Tariq:** AR Ortamında Etkileşimli Eğitim Modülü Geliştirme
+Bu haftada yapılan görev buraya yapıştırılacak!!
 ## 👤 **Shuja Ahmad Tariq:** AR Ortamında Etkileşimli 3D Model Görüntüleme Altyapısı Geliştirme
+Bu haftada yapılan görev buraya yapıştırılacak!!
+
