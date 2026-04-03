@@ -398,3 +398,5 @@ Gereksinim dokümanını ve planlamayı hazırlar.
 
 ## 2.Hafta (22-28 Mart)
 ## 👤 **Perihan Çelikoğlu:** UI/UX Wireframe ve Arayüz Tasarımı
+Uygulamanın kullanıcı arayüzü ve kullanıcı deneyimi wireframe'lerinin çıkarıldı.
+
