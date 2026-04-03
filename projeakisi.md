@@ -400,3 +400,15 @@ Gereksinim dokümanını ve planlamayı hazırlar.
 ## 👤 **Perihan Çelikoğlu:** UI/UX Wireframe ve Arayüz Tasarımı
 Uygulamanın kullanıcı arayüzü ve kullanıcı deneyimi wireframe'lerinin çıkarıldı.
 
+## 2. Haftanın devamı (3-10 Nisan)
+## 👤 **Perihan Çelikoğlu:**VR Ortamında Navigasyon ve Temel Etkileşim Mekaniklerinin Uygulanması
+## 👤 **Perihan Çelikoğlu:**VR Uygulamasında Kullanıcı Arayüzü İyileştirmeleri
+
+## 👤 **Burçin Ayyıldız:**Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma
+## 👤 **Burçin Ayyıldız:**AR/VR Projelerinde Performans Optimizasyonu
+
+## 👤 **Ahmet Yaman:**Sanal Gerçeklik Ortamında Çoklu Kullanıcı Desteği Entegrasyonu
+## 👤 **Ahmet Yaman:**Artırılmış Gerçeklik Uygulaması için Basit Bir Kullanıcı Arayüzü Tasarımı ve Entegrasyonu
+
+## 👤 **Shuja Ahmad Tariq:**AR Ortamında Etkileşimli Eğitim Modülü Geliştirme
+## 👤 **Shuja Ahmad Tariq:**AR Ortamında Etkileşimli 3D Model Görüntüleme Altyapısı Geliştirme
