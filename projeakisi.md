@@ -416,8 +416,60 @@ Bu haftada yapılan görev buraya yapıştırılacak!!
 ## 👤 **Ahmet Yaman:** Artırılmış Gerçeklik Uygulaması için Basit Bir Kullanıcı Arayüzü Tasarımı ve Entegrasyonu
 Bu haftada yapılan görev buraya yapıştırılacak!!
 
-## 👤 **Shuja Ahmad Tariq:** AR Ortamında Etkileşimli Eğitim Modülü Geliştirme
-Bu haftada yapılan görev buraya yapıştırılacak!!
+## 👤 **Shuja Ahmad Tariq:** 
+# 📱 AR Educational Toolkit
+### Augmented Reality Supported Training Application
+
+This repository contains the development progress for an AR-based educational platform designed to bring textbook concepts to life using 3D visualization and interactive mobile technology.
+
+---
+
+## 📖 Project Context
+The core mission of this application is to bridge the gap between static 2D learning and immersive 3D exploration. By utilizing **Augmented Reality (AR)**, we transform the student's physical environment into a dynamic classroom where complex biological, mechanical, and physical structures can be manipulated in real-time.
+
+### 🎯 Key Objectives
+* **Enhanced Visualization:** Turning abstract concepts (like molecular bonds or planetary motion) into tangible 3D models.
+* **Interactivity:** Empowering students to rotate, zoom, and inspect objects as if they were holding them.
+* **Hardware Accessibility:** Developed for standard AR-enabled iOS and Android devices.
+
+---
+
+## 🛠️ Technical Stack
+* **Engine:** Unity 2023.x (URP)
+* **AR Framework:** AR Foundation (ARKit & ARCore)
+* **Language:** C#
+* **Assets:** Low-poly 3D models optimized for mobile (Blender/Maya)
+
+---
+
+## 📅 Development Roadmap
+
+### ✅ Week 1: Analysis & Scope
+* Requirement gathering and stakeholder analysis.
+* Selection of initial educational modules.
+* Hardware compatibility verification.
+
+### 🏗️ Week 2: Interaction Infrastructure (Current)
+* Implementation of **AR Foundation** tracking.
+* Development of the **Interaction System**:
+    * **Placement:** Raycasting for surface detection.
+    * **Rotation:** Single-finger swipe logic.
+    * **Scaling:** Two-finger pinch-to-zoom.
+* Import pipeline for `.fbx` and `.glb` assets.
+
+### ⏳ Week 3: UI & Content Integration (Upcoming)
+* Designing the Mobile HUD and instructional overlays.
+* Finalizing high-fidelity educational models.
+
+---
+
+## 🚀 How to Run the Prototype
+1.  Clone this repository.
+2.  Open the project in **Unity Hub** (Version 2023.x recommended).
+3.  Ensure the **AR Foundation** package is installed via Package Manager.
+4.  Build to an Android (APK) or iOS (Xcode) device with AR capabilities.
+
+
 ## 👤 **Shuja Ahmad Tariq:** AR Ortamında Etkileşimli 3D Model Görüntüleme Altyapısı Geliştirme
 Bu haftada yapılan görev buraya yapıştırılacak!!
 
