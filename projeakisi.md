@@ -470,6 +470,72 @@ The core mission of this application is to bridge the gap between static 2D lear
 4.  Build to an Android (APK) or iOS (Xcode) device with AR capabilities.
 
 
-## 👤 **Shuja Ahmad Tariq:** AR Ortamında Etkileşimli 3D Model Görüntüleme Altyapısı Geliştirme
-Bu haftada yapılan görev buraya yapıştırılacak!!
+## 👤 **Shuja Ahmad Tariq:** 
+# 🎓 AR Training Module: Interactive Learning & Assessment
+### Week 4: Pedagogical Layer & User Feedback Systems
+
+Building upon the 3D infrastructure of Week 2 and the content integration of Week 3, Week 4 focuses on turning 3D models into active learning tools through **Gamification**, **Quizzing**, and **Feedback Loops**.
+
+---
+
+## 📋 Task Overview
+The goal of this phase is to implement a logic layer that allows students to interact with specific "hotspots" on a model, answer contextual questions, and receive real-time validation of their knowledge.
+
+---
+
+## 🛠️ New Features Implemented
+
+### 1. Interactive Hotspots (Object Interaction)
+* **Feature:** Users can tap specific parts of a 3D model (e.g., the 'Left Ventricle' of a heart) to trigger informational pop-ups.
+* **Logic:** Implemented using **Physics Raycasters** on specific child-colliders of the 3D model.
+* **UI:** World-space canvases that "billboard" (always face the camera) to display labels.
+
+### 2. Assessment Engine (Knowledge Testing)
+* **Multiple Choice Questions (MCQ):** Integrated a dynamic UI overlay that presents questions based on the current 3D scene.
+* **Spatial Quizzing:** A "Find the Part" mode where the app asks the student to tap a specific component of the AR model.
+
+### 3. Feedback & Validation System
+* **Visual Feedback:** Correct answers trigger a green highlight/particle effect; incorrect answers trigger a red pulse.
+* **Progress Tracking:** A simple session manager that tracks how many questions the student answered correctly.
+* **Audio Cues:** Integration of "Success" and "Try Again" sound effects to reinforce learning.
+
+---
+
+## 💻 Technical Implementation (C#)
+
+This week introduced the `ARQuizManager.cs`, which coordinates the interaction between the 3D model and the UI.
+
+```csharp
+using UnityEngine;
+using TMPro;
+
+public class ARQuizManager : MonoBehaviour
+{
+    [Header("UI Elements")]
+    public TextMeshProUGUI questionText;
+    public GameObject feedbackPanel;
+
+    [Header("State")]
+    private string currentTargetPart = "Engine_Piston";
+
+    public void OnObjectTapped(string partName)
+    {
+        if (partName == currentTargetPart)
+        {
+            ShowFeedback("Correct! You've identified the Piston.", Color.green);
+        }
+        else
+        {
+            ShowFeedback("Not quite. That was the " + partName, Color.red);
+        }
+    }
+
+    private void ShowFeedback(string message, Color color)
+    {
+        feedbackPanel.SetActive(true);
+        var text = feedbackPanel.GetComponentInChildren<TextMeshProUGUI>();
+        text.text = message;
+        text.color = color;
+    }
+}
 
