@@ -401,9 +401,28 @@ Gereksinim dokümanını ve planlamayı hazırlar.
 Uygulamanın kullanıcı arayüzü ve kullanıcı deneyimi wireframe'lerinin çıkarıldı.
 
 ## 👤 **Perihan Çelikoğlu:** VR Ortamında Navigasyon ve Temel Etkileşim Mekaniklerinin Uygulanması
-Bu haftada yapılan görev buraya yapıştırılacak!!
+Navigasyon ve Temel Etkileşim
+
+Bu görev kapsamında Unity ortamında temel kullanıcı hareketi ve etkileşim sistemi geliştirilmiştir.
+
+Yapılanlar:
+Kullanıcının WASD tuşları ile sahnede hareket etmesi sağlandı
+Mouse ile sağa-sola bakış (kamera kontrolü) eklendi
+Sahnedeki 3D nesne (cube) ile tıklama etkileşimi oluşturuldu
+Tıklama sonrası:
+Nesnenin rengi değiştirildi
+Nesneye ait bilgilendirme yazısı gösterildi
+Nesne üzerine gelindiğinde hover (renk değişimi) efekti eklendi
 ## 👤 **Perihan Çelikoğlu:** VR Uygulamasında Kullanıcı Arayüzü İyileştirmeleri
-Bu haftada yapılan görev buraya yapıştırılacak!!
+UI / UX İyileştirme
+Bu görev kapsamında kullanıcı deneyimini artırmaya yönelik basit ama etkili iyileştirmeler yapılmıştır.
+Yapılanlar:
+Kullanıcıya yönlendirme sağlamak için bilgilendirme metni eklendi
+Etkileşimlerde kullanıcıya geri bildirim vermek için:
+Renk değişimi (hover ve click) kullanıldı
+Bilgi metni sistemi:
+Aç/Kapa (toggle) şeklinde çalışacak şekilde düzenlendi
+Kullanıcının sistemi kolay anlaması için basit ve anlaşılır bir arayüz oluşturuldu
 
 ## 👤 **Burçin Ayyıldız:** Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma
 Bu haftada yapılan görev buraya yapıştırılacak!!
