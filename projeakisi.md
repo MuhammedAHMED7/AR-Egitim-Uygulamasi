@@ -82,7 +82,7 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
           # Tekrar Kullanılabilir AR Nesneleri
           # Ana Menü, Biyoloji Laboratuvarı, Fizik Laboratuvarı
           # Takip kararlılığı için birim testler
-<details>
+
 
    ## 👤 **Muhammed AHMED (Proje Yöneticisi):** Artırılmış Gerçeklik Teknolojileri Araştırma Raporu
   > **Araştırmayı Yapan:** Muhammed AHMED | **Durum:** Tamamlandı
@@ -94,7 +94,7 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
   * **Unity Entegrasyonu:** Projede kullanılacak olan Unity 2022 LTS sürümünün paket yöneticisi (Package Manager) üzerinden resmi ve stabil şekilde projeye eklenebilir. Ek bir yazılım kurulumu gerektirmez.
   * **Performans ve Maliyet:** Projemiz eğitim amaçlı bir prototip olduğundan ücretli sistemlerin zorunlu logo (filigran) kısıtlamalarından kaçınmak için tamamen ücretsiz olan bu mimari tercih edilmiştir. Ayrıca ARCore mobil cihazlarda minimum 30 FPS performansı sağlayacak şekilde optimize edilmiştir.
   * **Görsel İşaretleyici (Marker) Algılama:** Ders kitaplarındaki görsellerin kamera ile taranması ve üzerine 3 boyutlu eğitim modellerinin yerleştirilmesi işlemi, AR Foundation'ın sunduğu Image Tracking (Görsel İzleme) teknolojisi sayesinde yüksek doğrulukla gerçekleştirilebilmektedir.
-<details>
+
 
 
 ## 👤 **Ahmet Yaman:**  Sanal Gerçeklik Teknolojileri Araştırma Raporu
@@ -396,8 +396,9 @@ Blender kullanarak 3D modeller oluşturur.
 Mobil uygulama arayüzünü tasarlar. 
 >Proje Analisti 
 Gereksinim dokümanını ve planlamayı hazırlar. 
-
+<details>
 ## 2.Hafta (3-10 Nisan)
+<details>
 ## 👤 **Perihan Çelikoğlu:** UI/UX Wireframe ve Arayüz Tasarımı
 Uygulamanın kullanıcı arayüzü ve kullanıcı deneyimi wireframe'lerinin çıkarıldı.
 
