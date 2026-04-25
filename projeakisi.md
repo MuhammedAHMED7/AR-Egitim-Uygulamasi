@@ -530,7 +530,7 @@ The core mission of this application is to bridge the gap between static 2D lear
 
 </details>
 
----
+
 
 <details>
 <summary>👉 👤 Shuja Ahmad Tariq: AR Training Module: Interactive Learning & Assessment (Açmak için tıklayın)</summary>
