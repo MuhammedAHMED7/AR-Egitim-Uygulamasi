@@ -603,5 +603,20 @@ public class ARQuizManager : MonoBehaviour
     }
 }
 ```
+</details>
+
+---
+
 ## 4. Hafta (23-30 Nisan)
 <details>
+
+<summary>👉 👤 **Burçin Ayyıldız:** Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma</summary>
+Bu haftada yapılan görev buraya yapıştırılacak!!
+<summary>👉 👤 **Burçin Ayyıldız:** AR/VR Projelerinde Performans Optimizasyonu</summary>
+Bu haftada yapılan görev buraya yapıştırılacak!!
+
+
+<summary>👉 👤 **Ahmet Yaman:** Sanal Gerçeklik Ortamında Çoklu Kullanıcı Desteği Entegrasyonu</summary>
+Bu haftada yapılan görev buraya yapıştırılacak!!
+<summary>👉 👤 **Ahmet Yaman:** Artırılmış Gerçeklik Uygulaması için Basit Bir Kullanıcı Arayüzü Tasarımı ve Entegrasyonu</summary>
+Bu haftada yapılan görev buraya yapıştırılacak!!
