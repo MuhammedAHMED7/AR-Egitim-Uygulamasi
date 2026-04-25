@@ -1,6 +1,6 @@
 ## 1. Hafta (5-12 Mart)
-
- ## 👤 **Shuja Ahmad Tariq:** Proje Analizi ve Kapsam Tanımı
+<details>
+ ## <summary>👤 **Shuja Ahmad Tariq:** Proje Analizi ve Kapsam Tanımı</summary>
 
 ### 1.1 Proje Özeti
 **AR-Edu Uygulaması**, geleneksel statik ders kitapları ile sürükleyici dijital öğrenme arasındaki boşluğu doldurmak için tasarlanmış yeni nesil bir pedagojik araçtır. **Artırılmış Gerçeklik (AR)** teknolojisini kullanan uygulama, 2D diyagramları etkileşimli 3D modellere dönüştürerek öğrencilerin soyut kavramları gerçek zamanlı olarak görselleştirmelerini sağlar.
@@ -81,7 +81,7 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
           # Tekrar Kullanılabilir AR Nesneleri
           # Ana Menü, Biyoloji Laboratuvarı, Fizik Laboratuvarı
           # Takip kararlılığı için birim testler
-
+<details>
 
    ## 👤 **Muhammed AHMED (Proje Yöneticisi):** Artırılmış Gerçeklik Teknolojileri Araştırma Raporu
   > **Araştırmayı Yapan:** Muhammed AHMED | **Durum:** Tamamlandı
