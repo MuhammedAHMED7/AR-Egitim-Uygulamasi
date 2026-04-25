@@ -400,6 +400,7 @@ Gereksinim dokümanını ve planlamayı hazırlar.
 ## 👤 **Perihan Çelikoğlu:** UI/UX Wireframe ve Arayüz Tasarımı
 Uygulamanın kullanıcı arayüzü ve kullanıcı deneyimi wireframe'lerinin çıkarıldı.
 
+## 3.Hafta (13-20 Nisan)
 ## 👤 **Perihan Çelikoğlu:** VR Ortamında Navigasyon ve Temel Etkileşim Mekaniklerinin Uygulanması
 Navigasyon ve Temel Etkileşim
 
@@ -423,17 +424,6 @@ Renk değişimi (hover ve click) kullanıldı
 Bilgi metni sistemi:
 Aç/Kapa (toggle) şeklinde çalışacak şekilde düzenlendi
 Kullanıcının sistemi kolay anlaması için basit ve anlaşılır bir arayüz oluşturuldu
-
-## 👤 **Burçin Ayyıldız:** Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma
-Bu haftada yapılan görev buraya yapıştırılacak!!
-## 👤 **Burçin Ayyıldız:** AR/VR Projelerinde Performans Optimizasyonu
-Bu haftada yapılan görev buraya yapıştırılacak!!
-
-
-## 👤 **Ahmet Yaman:** Sanal Gerçeklik Ortamında Çoklu Kullanıcı Desteği Entegrasyonu
-Bu haftada yapılan görev buraya yapıştırılacak!!
-## 👤 **Ahmet Yaman:** Artırılmış Gerçeklik Uygulaması için Basit Bir Kullanıcı Arayüzü Tasarımı ve Entegrasyonu
-Bu haftada yapılan görev buraya yapıştırılacak!!
 
 ## 👤 **Shuja Ahmad Tariq:** 
 # 📱 AR Educational Toolkit
@@ -557,4 +547,15 @@ public class ARQuizManager : MonoBehaviour
         text.color = color;
     }
 }
+## 5.Hafta (23-30 Nisan)
 
+## 👤 **Burçin Ayyıldız:** Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma
+Bu haftada yapılan görev buraya yapıştırılacak!!
+## 👤 **Burçin Ayyıldız:** AR/VR Projelerinde Performans Optimizasyonu
+Bu haftada yapılan görev buraya yapıştırılacak!!
+
+
+## 👤 **Ahmet Yaman:** Sanal Gerçeklik Ortamında Çoklu Kullanıcı Desteği Entegrasyonu
+Bu haftada yapılan görev buraya yapıştırılacak!!
+## 👤 **Ahmet Yaman:** Artırılmış Gerçeklik Uygulaması için Basit Bir Kullanıcı Arayüzü Tasarımı ve Entegrasyonu
+Bu haftada yapılan görev buraya yapıştırılacak!!
