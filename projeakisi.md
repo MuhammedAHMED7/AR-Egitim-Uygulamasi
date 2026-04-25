@@ -547,7 +547,8 @@ public class ARQuizManager : MonoBehaviour
         text.color = color;
     }
 }
-## 5.Hafta (23-30 Nisan)
+```
+## 4.Hafta (23-30 Nisan)
 
 ## 👤 **Burçin Ayyıldız:** Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma
 Bu haftada yapılan görev buraya yapıştırılacak!!
