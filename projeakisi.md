@@ -1,7 +1,5 @@
 ## 1. Hafta (5-12 Mart)
-<details>
-
-  ## <summary>👤 **Shuja Ahmad Tariq:** Proje Analizi ve Kapsam Tanımı</summary>
+  ## 👤 **Shuja Ahmad Tariq:** Proje Analizi ve Kapsam Tanımı
 
 ### 1.1 Proje Özeti
 **AR-Edu Uygulaması**, geleneksel statik ders kitapları ile sürükleyici dijital öğrenme arasındaki boşluğu doldurmak için tasarlanmış yeni nesil bir pedagojik araçtır. **Artırılmış Gerçeklik (AR)** teknolojisini kullanan uygulama, 2D diyagramları etkileşimli 3D modellere dönüştürerek öğrencilerin soyut kavramları gerçek zamanlı olarak görselleştirmelerini sağlar.
@@ -396,9 +394,8 @@ Blender kullanarak 3D modeller oluşturur.
 Mobil uygulama arayüzünü tasarlar. 
 >Proje Analisti 
 Gereksinim dokümanını ve planlamayı hazırlar. 
-<details>
+
 ## 2.Hafta (3-10 Nisan)
-<details>
 ## 👤 **Perihan Çelikoğlu:** UI/UX Wireframe ve Arayüz Tasarımı
 Uygulamanın kullanıcı arayüzü ve kullanıcı deneyimi wireframe'lerinin çıkarıldı.
 
