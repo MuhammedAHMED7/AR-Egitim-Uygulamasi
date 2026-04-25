@@ -39,9 +39,9 @@ Projenin teknoloji seçimi (AR Foundation) yapılmış, geliştirme ortamları k
 UI/UX Wireframe'lerin Oluşturulması
 
 ## 🗓️ Mevcut Durum (3. Hafta)
--AR Ortamında Etkileşimli 3D Model Görüntüleme Altyapısı Geliştirme
--AR Ortamında Etkileşimli Eğitim Modülü Geliştirme
--VR Ortamında Navigasyon ve Temel Etkileşim Mekaniklerinin Uygulanması
--VR Uygulamasında Kullanıcı Arayüzü İyileştirmeleri
+- AR Ortamında Etkileşimli 3D Model Görüntüleme Altyapısı Geliştirme
+- AR Ortamında Etkileşimli Eğitim Modülü Geliştirme
+- VR Ortamında Navigasyon ve Temel Etkileşim Mekaniklerinin Uygulanması
+- VR Uygulamasında Kullanıcı Arayüzü İyileştirmeleri
 
 
