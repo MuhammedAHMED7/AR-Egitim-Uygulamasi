@@ -1,5 +1,7 @@
 ## 1. Hafta (5-12 Mart)
-  ## 👤 **Shuja Ahmad Tariq:** Proje Analizi ve Kapsam Tanımı
+
+<details>
+<summary>👉 👤 Shuja Ahmad Tariq: Proje Analizi ve Kapsam Tanımı (Açmak için tıklayın)</summary>
 
 ### 1.1 Proje Özeti
 **AR-Edu Uygulaması**, geleneksel statik ders kitapları ile sürükleyici dijital öğrenme arasındaki boşluğu doldurmak için tasarlanmış yeni nesil bir pedagojik araçtır. **Artırılmış Gerçeklik (AR)** teknolojisini kullanan uygulama, 2D diyagramları etkileşimli 3D modellere dönüştürerek öğrencilerin soyut kavramları gerçek zamanlı olarak görselleştirmelerini sağlar.
@@ -40,8 +42,6 @@
 ### 3.1 Üst Düzey Sistem Mimarisi
 Uygulama, dosya boyutunu küçük tutmak ve içeriği dinamik yönetmek için **Modüler İstemci-Sunucu Mimarisini** takip eder.
 
-
-
 * **Frontend (Önyüz):** Unity 3D Motoru.
 * **AR Katmanı:** **AR Foundation** (ARKit ve ARCore için platformlar arası sarmalayıcı).
 * **Bulut Entegrasyonu:** Kullanıcı kimlik doğrulaması ve model meta verileri (Addressable Assets) için Firebase/AWS.
@@ -81,124 +81,136 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
           # Ana Menü, Biyoloji Laboratuvarı, Fizik Laboratuvarı
           # Takip kararlılığı için birim testler
 
-
-   ## 👤 **Muhammed AHMED (Proje Yöneticisi):** Artırılmış Gerçeklik Teknolojileri Araştırma Raporu
-  > **Araştırmayı Yapan:** Muhammed AHMED | **Durum:** Tamamlandı
-
-  Proje kapsamında kullanılacak Artırılmış Gerçeklik (AR) altyapısı için sektördeki çeşitli SDK'lar (Vuforia, EasyAR, AR Foundation) teknik açıdan incelenmiştir. Yapılan analizler ve Gereksinim Toplama ve Belgeleme Dokümanı doğrultusunda, projemizde Unity AR Foundation ve Android platformu için Google ARCore eklentisinin kullanılmasına karar verilmiştir.
-
-  **Neden AR Foundation ve ARCore Seçildi?**
-  * **Çapraz Platform (Cross-Platform) Desteği:** AR Foundation, projenin temel yapısını bozmadan hem Android (ARCore) hem de opsiyonel olarak iOS (ARKit) cihazlar için geliştirme yapmaya olanak tanır.
-  * **Unity Entegrasyonu:** Projede kullanılacak olan Unity 2022 LTS sürümünün paket yöneticisi (Package Manager) üzerinden resmi ve stabil şekilde projeye eklenebilir. Ek bir yazılım kurulumu gerektirmez.
-  * **Performans ve Maliyet:** Projemiz eğitim amaçlı bir prototip olduğundan ücretli sistemlerin zorunlu logo (filigran) kısıtlamalarından kaçınmak için tamamen ücretsiz olan bu mimari tercih edilmiştir. Ayrıca ARCore mobil cihazlarda minimum 30 FPS performansı sağlayacak şekilde optimize edilmiştir.
-  * **Görsel İşaretleyici (Marker) Algılama:** Ders kitaplarındaki görsellerin kamera ile taranması ve üzerine 3 boyutlu eğitim modellerinin yerleştirilmesi işlemi, AR Foundation'ın sunduğu Image Tracking (Görsel İzleme) teknolojisi sayesinde yüksek doğrulukla gerçekleştirilebilmektedir.
+</details>
 
 
+<details>
+<summary>👉 👤 Muhammed AHMED (Proje Yöneticisi): Artırılmış Gerçeklik Teknolojileri Araştırma Raporu (Açmak için tıklayın)</summary>
 
-## 👤 **Ahmet Yaman:**  Sanal Gerçeklik Teknolojileri Araştırma Raporu
+> **Araştırmayı Yapan:** Muhammed AHMED | **Durum:** Tamamlandı
+
+ Proje kapsamında kullanılacak Artırılmış Gerçeklik (AR) altyapısı için sektördeki çeşitli SDK'lar (Vuforia, EasyAR, AR Foundation) teknik açıdan incelenmiştir. Yapılan analizler ve Gereksinim Toplama ve Belgeleme Dokümanı doğrultusunda, projemizde Unity AR Foundation ve Android platformu için Google ARCore eklentisinin kullanılmasına karar verilmiştir.
+
+ **Neden AR Foundation ve ARCore Seçildi?**
+ * **Çapraz Platform (Cross-Platform) Desteği:** AR Foundation, projenin temel yapısını bozmadan hem Android (ARCore) hem de opsiyonel olarak iOS (ARKit) cihazlar için geliştirme yapmaya olanak tanır.
+ * **Unity Entegrasyonu:** Projede kullanılacak olan Unity 2022 LTS sürümünün paket yöneticisi (Package Manager) üzerinden resmi ve stabil şekilde projeye eklenebilir. Ek bir yazılım kurulumu gerektirmez.
+ * **Performans ve Maliyet:** Projemiz eğitim amaçlı bir prototip olduğundan ücretli sistemlerin zorunlu logo (filigran) kısıtlamalarından kaçınmak için tamamen ücretsiz olan bu mimari tercih edilmiştir. Ayrıca ARCore mobil cihazlarda minimum 30 FPS performansı sağlayacak şekilde optimize edilmiştir.
+ * **Görsel İşaretleyici (Marker) Algılama:** Ders kitaplarındaki görsellerin kamera ile taranması ve üzerine 3 boyutlu eğitim modellerinin yerleştirilmesi işlemi, AR Foundation'ın sunduğu Image Tracking (Görsel İzleme) teknolojisi sayesinde yüksek doğrulukla gerçekleştirilebilmektedir.
+
+</details>
+
+
+<details>
+<summary>👉 👤 Ahmet Yaman: Sanal Gerçeklik Teknolojileri Araştırma Raporu (Açmak için tıklayın)</summary>
+
 🧭 1. Raporun Amacı
 Bu rapor, proje bağlamında kullanılabilecek başlıca artırılmış gerçeklik (AR) ve sanal gerçeklik (VR) teknolojilerini değerlendirmek, güçlü ve zayıf yönlerini analiz etmek ve en uygun teknolojik yol haritasını ortaya koymak için hazırlanmıştır.
 ________________________________________
 🎯 2. Değerlendirilen Teknolojiler / Araçlar
-Teknoloji	Kategori	Platform Desteği	Kullanım Alanı
-Unity + AR Foundation	AR/VR Geliştirme	iOS, Android	AR/VR Hibrit
-Unreal Engine AR/VR	AR/VR Geliştirme	iOS, Android	Yüksek Görsel Kalite
-ARKit	AR SDK	iOS	iPhone/iPad AR
-ARCore	AR SDK	Android	Android AR
-Vuforia	AR SDK	iOS, Android	Görsel Takip Odaklı AR
-Microsoft Mixed Reality	MR Platform	HoloLens, Windows	Gelişmiş MR
-Google VR / Cardboard	VR SDK	iOS, Android	Basit VR Deneyimleri
-Oculus SDK (Meta)	VR SDK	Quest/PC	VR Odaklı
-OpenXR	Standard API	Çoklu Cihaz	Evrensel VR/AR
+
+| Teknoloji | Kategori | Platform Desteği | Kullanım Alanı |
+| :--- | :--- | :--- | :--- |
+| Unity + AR Foundation | AR/VR Geliştirme | iOS, Android | AR/VR Hibrit |
+| Unreal Engine AR/VR | AR/VR Geliştirme | iOS, Android | Yüksek Görsel Kalite |
+| ARKit | AR SDK | iOS | iPhone/iPad AR |
+| ARCore | AR SDK | Android | Android AR |
+| Vuforia | AR SDK | iOS, Android | Görsel Takip Odaklı AR |
+| Microsoft Mixed Reality | MR Platform | HoloLens, Windows | Gelişmiş MR |
+| Google VR / Cardboard | VR SDK | iOS, Android | Basit VR Deneyimleri |
+| Oculus SDK (Meta) | VR SDK | Quest/PC | VR Odaklı |
+| OpenXR | Standard API | Çoklu Cihaz | Evrensel VR/AR |
+
 ________________________________________
 🔍 3. AR / VR Teknolojilerinin Detaylı İncelemesi
+
 🎮 3.1 Unity + AR Foundation
 Kategori: AR/VR Geliştirme Framework’ü
 Öne Çıkan Özellikler:
-•	Hem ARKit hem ARCore’u tek bir API ile kullanabilme
-•	Unity Editor ile zengin sahne tasarımı
-•	3D model entegrasyonu ve animasyon desteği
-•	Mobil AR & VR deneyimlerinin aynı projede yönetimi
+* Hem ARKit hem ARCore’u tek bir API ile kullanabilme
+* Unity Editor ile zengin sahne tasarımı
+* 3D model entegrasyonu ve animasyon desteği
+* Mobil AR & VR deneyimlerinin aynı projede yönetimi
 Artıları:
-•	Kod tabanı tek — iOS & Android uyumlu
-•	Zengin topluluk & dökümantasyon
-•	AR ve VR’i birlikte destekleyebilme
-•	Mobil performans optimizasyonu kolay
+* Kod tabanı tek — iOS & Android uyumlu
+* Zengin topluluk & dökümantasyon
+* AR ve VR’i birlikte destekleyebilme
+* Mobil performans optimizasyonu kolay
 Eksileri:
-•	Büyük projelerde bellek yönetimi dikkat gerektirir
-•	AR Foundation’un ileri seviye takip kontrolü sınırlı olabiliyor
+* Büyük projelerde bellek yönetimi dikkat gerektirir
+* AR Foundation’un ileri seviye takip kontrolü sınırlı olabiliyor
 Değerlendirme: Proje için en esnek ve en uygun çözüm.
-________________________________________
+
 🚀 3.2 Unreal Engine (AR/VR)
 Kategori: Geliştirme Motoru
 Öne Çıkan Özellikler:
-•	Yüksek görsel kalite, gerçekçi render
-•	Blueprint görsel programlama
-•	Advanced materyal ve ışıklandırma desteği
+* Yüksek görsel kalite, gerçekçi render
+* Blueprint görsel programlama
+* Advanced materyal ve ışıklandırma desteği
 Artıları:
-•	Photoreal görseller
-•	Blueprint ile hızlı prototipleme
+* Photoreal görseller
+* Blueprint ile hızlı prototipleme
 Eksileri:
-•	Mobil AR projelerinde performans zorlayabilir
-•	Geniş öğrenme eğrisi
+* Mobil AR projelerinde performans zorlayabilir
+* Geniş öğrenme eğrisi
 Değerlendirme: Görsel kalite öncelikli AR/VR projeleri için uygun.
-________________________________________
+
 🧠 3.3 ARKit (Apple)
 Kategori: iOS AR SDK
 Öne Çıkan Özellikler:
-•	Yüz takibi, yüz ifadeleri
-•	Işık haritalama
-•	Gerçek dünya fonksiyon takibi
+* Yüz takibi, yüz ifadeleri
+* Işık haritalama
+* Gerçek dünya fonksiyon takibi
 Artıları:
-•	iOS cihazlarda optimize AR
-•	Yüksek takip doğruluğu
+* iOS cihazlarda optimize
+* Yüksek takip doğruluğu
 Eksileri:
-•	Sadece iOS
-________________________________________
+* Sadece iOS
+
 🤖 3.4 ARCore (Google)
 Kategori: Android AR SDK
 Öne Çıkan Özellikler:
-•	Hareket takibi
-•	Çevresel anlayış
-•	Yerleştirme yüzey tespiti
+* Hareket takibi
+* Çevresel anlayış
+* Yerleştirme yüzey tespiti
 Artıları:
-•	Android üzerinde güçlü AR
-•	Geniş cihaz desteği
+* Android üzerinde güçlü AR
+* Geniş cihaz desteği
 Eksileri:
-•	iOS üzerinde kullanılamaz
-________________________________________
+* iOS üzerinde kullanılamaz
+
 🔎 3.5 Vuforia
 Kategori: AR SDK
 Öne Çıkan Özellikler:
-•	Görsel hedef tanıma
-•	Kitap, nesne, resim takibi
+* Görsel hedef tanıma
+* Kitap, nesne, resim takibi
 Artıları:
-•	Görsel nesne tanıma çok güçlü
-•	Fiziksel materyalleri takip etmede avantajlı
+* Görsel nesne tanıma çok güçlü
+* Fiziksel materyalleri takip etmede avantajlı
 Eksileri:
-•	Mobil AR deneyimi Unity AR Foundation kadar esnek değil
-________________________________________
+* Mobil AR deneyimi Unity AR Foundation kadar esnek değil
+
 🕶 3.6 Microsoft Mixed Reality
 Kategori: MR Platform
 Öne Çıkan Özellikler:
-•	HoloLens desteği
-•	Gerçek dünya + hologram sentezi
+* HoloLens desteği
+* Gerçek dünya + hologram sentezi
 Artıları:
-•	Endüstriyel MR projelerinde güçlü
+* Endüstriyel MR projelerinde güçlü
 Eksileri:
-•	Sadece HoloLens
-________________________________________
+* Sadece HoloLens
+
 🌐 3.7 OpenXR
 Kategori: Evrensel AR/VR API Standardı
 Artıları:
-•	Birden çok AR/VR cihazı tek çatı altında
+* Birden çok AR/VR cihazı tek çatı altında
 Eksileri:
-•	Geliştirme karmaşıklığı yaratabilir
+* Geliştirme karmaşıklığı yaratabilir
+
 ________________________________________
 📊 4. Teknik Karşılaştırma Tablosu
 
 | Kriter | Unity + AR Foundation | ARKit | ARCore | Vuforia | Unreal |
-|------|----------------------|------|-------|--------|--------|
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | Mobil Uyum | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
 | Platform Desteği | iOS + Android | iOS | Android | iOS + Android | iOS + Android |
 | Takip / İzleme | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
@@ -206,58 +218,72 @@ ________________________________________
 | Performans | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
 | Öğrenme Eğrisi | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
 | Topluluk / Dökümantasyon | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+
 ________________________________________
 📌 5. Proje İçin Önerilen Teknoloji Yığını
 Ana Teknoloji
-•	Unity + AR Foundation
-o	Hem iOS hem Android’de tek çözüm
-o	ARKit & ARCore entegrasyonu tek çatı altında
-o	3D model ve interaktif sahneler için güçlü
+* Unity + AR Foundation
+    * Hem iOS hem Android’de tek çözüm
+    * ARKit & ARCore entegrasyonu tek çatı altında
+    * 3D model ve interaktif sahneler için güçlü
+
 Ek SDK / Araçlar
-Kullanım Amacı	Önerilen Teknoloji
-Nesne / Görsel Takibi	Vuforia
-Yüz Takibi (iOS)	ARKit Face Tracking
-3D Model Oluşturma	Blender / Maya
-UI Arayüz Geliştirme	Unity UI Toolkit
-Performans Optimizasyonu	Unity Profiler
+
+| Kullanım Amacı | Önerilen Teknoloji |
+| :--- | :--- |
+| Nesne / Görsel Takibi | Vuforia |
+| Yüz Takibi (iOS) | ARKit Face Tracking |
+| 3D Model Oluşturma | Blender / Maya |
+| UI Arayüz Geliştirme | Unity UI Toolkit |
+| Performans Optimizasyonu | Unity Profiler |
+
 ________________________________________
 🎓 6. Teknoloji Avantajları & Dezavantajları
 Unity + AR Foundation
-•	Avantaj: Tek projede çapraz platform, zengin eklenti desteği, öğrenmesi kolay
-•	Dezavantaj: İleri seviye izleme bazı özel SDK’larda daha güçlü olabilir
+* Avantaj: Tek projede çapraz platform, zengin eklenti desteği, öğrenmesi kolay
+* Dezavantaj: İleri seviye izleme bazı özel SDK’larda daha güçlü olabilir
 ARKit & ARCore
-•	Avantaj: Yerel AR fonksiyonları, yüksek takip doğruluğu
-•	Dezavantaj: Tek platforma özel
+* Avantaj: Yerel AR fonksiyonları, yüksek takip doğruluğu
+* Dezavantaj: Tek platforma özel
 Vuforia
-•	Avantaj: Görsel hedef takibi mükemmel
-•	Dezavantaj: Genel AR Foundation kadar esnek değil
+* Avantaj: Görsel hedef takibi mükemmel
+* Dezavantaj: Genel AR Foundation kadar esnek değil
 Unreal
-•	Avantaj: Yüksek görsel kalite
-•	Dezavantaj: Mobil için ağır
+* Avantaj: Yüksek görsel kalite
+* Dezavantaj: Mobil için ağır
+
 ________________________________________
 📌 7. Özet Değerlendirme
-Kullanım Durumu	En Uygun Teknoloji
-Yüksek Performanslı Mobil AR	Unity + AR Foundation
-Gelişmiş Görsel Takip	Vuforia
-iOS Esaslı AR	ARKit
-Android Esaslı AR	ARCore
-VR Eğitim Deneyimleri	Oculus / OpenXR + Unity
+
+| Kullanım Durumu | En Uygun Teknoloji |
+| :--- | :--- |
+| Yüksek Performanslı Mobil AR | Unity + AR Foundation |
+| Gelişmiş Görsel Takip | Vuforia |
+| iOS Esaslı AR | ARKit |
+| Android Esaslı AR | ARCore |
+| VR Eğitim Deneyimleri | Oculus / OpenXR + Unity |
+
 ________________________________________
 🏁 8. Sonuç ve Tavsiyeler
-•	Projenin ana platformu olarak Unity + AR Foundation kullanılmalı.
-•	Görsel kitap öğeleri için Vuforia entegre edilebilir.
-•	iOS göz takibi veya özel yüz ifadeleri için ARKit Face Tracking kullanılabilir.
-•	3D nesneler için Blender ile özelleştirilmiş modeller üretilebilir.
+* Projenin ana platformu olarak Unity + AR Foundation kullanılmalı.
+* Görsel kitap öğeleri için Vuforia entegre edilebilir.
+* iOS göz takibi veya özel yüz ifadeleri için ARKit Face Tracking kullanılabilir.
+* 3D nesneler için Blender ile özelleştirilmiş modeller üretilebilir.
+
+</details>
 
 
-
-## 👤 **Burçin Ayyıldız:** Geliştirme Ortamı Kurulumu
+<details>
+<summary>👉 👤 Burçin Ayyıldız: Geliştirme Ortamı Kurulumu (Açmak için tıklayın)</summary>
 
 Projenin geliştirme ortamı Unity 2022.3 LTS kullanılarak oluşturulmuştur. Kod geliştirme için Visual Studio 2022, sürüm kontrolü için Git ve Github kullanılmıştır. Android cihazlarda test yapabilmek için Android SDK, NDK ve OpenJDK paketleri kurulmuştur. Artırılmış gerçeklik desteği için AR Foundation ve ARCore XR Plugin projeye eklenmiştir.
 
-## 👤 **Perihan Çelikoğlu:** Gereksinim Toplama ve Belgeleme Dokümanı
+</details>
 
-  
+
+<details>
+<summary>👉 👤 Perihan Çelikoğlu: Gereksinim Toplama ve Belgeleme Dokümanı (Açmak için tıklayın)</summary>
+
 * 1. Kullanılacak Teknolojiler
 Bu proje üniversite 1. sınıf yazılım öğrencileri için uygun teknolojiler kullanılarak geliştirilecektir.
 
@@ -395,36 +421,61 @@ Mobil uygulama arayüzünü tasarlar.
 >Proje Analisti 
 Gereksinim dokümanını ve planlamayı hazırlar. 
 
-## 2.Hafta (3-10 Nisan)
-## 👤 **Perihan Çelikoğlu:** UI/UX Wireframe ve Arayüz Tasarımı
+</details>
+
+---
+
+## 2. Hafta (3-10 Nisan)
+
+<details>
+<summary>👉 👤 Perihan Çelikoğlu: UI/UX Wireframe ve Arayüz Tasarımı (Açmak için tıklayın)</summary>
+
 Uygulamanın kullanıcı arayüzü ve kullanıcı deneyimi wireframe'lerinin çıkarıldı.
 
-## 3.Hafta (13-20 Nisan)
-## 👤 **Perihan Çelikoğlu:** VR Ortamında Navigasyon ve Temel Etkileşim Mekaniklerinin Uygulanması
+</details>
+
+---
+
+## 3. Hafta (13-20 Nisan)
+
+<details>
+<summary>👉 👤 Perihan Çelikoğlu: VR Ortamında Navigasyon ve Temel Etkileşim Mekaniklerinin Uygulanması (Açmak için tıklayın)</summary>
+
 Navigasyon ve Temel Etkileşim
 
 Bu görev kapsamında Unity ortamında temel kullanıcı hareketi ve etkileşim sistemi geliştirilmiştir.
 
 Yapılanlar:
-Kullanıcının WASD tuşları ile sahnede hareket etmesi sağlandı
-Mouse ile sağa-sola bakış (kamera kontrolü) eklendi
-Sahnedeki 3D nesne (cube) ile tıklama etkileşimi oluşturuldu
-Tıklama sonrası:
-Nesnenin rengi değiştirildi
-Nesneye ait bilgilendirme yazısı gösterildi
-Nesne üzerine gelindiğinde hover (renk değişimi) efekti eklendi
-## 👤 **Perihan Çelikoğlu:** VR Uygulamasında Kullanıcı Arayüzü İyileştirmeleri
+* Kullanıcının WASD tuşları ile sahnede hareket etmesi sağlandı
+* Mouse ile sağa-sola bakış (kamera kontrolü) eklendi
+* Sahnedeki 3D nesne (cube) ile tıklama etkileşimi oluşturuldu
+* Tıklama sonrası:
+    * Nesnenin rengi değiştirildi
+    * Nesneye ait bilgilendirme yazısı gösterildi
+* Nesne üzerine gelindiğinde hover (renk değişimi) efekti eklendi
+
+</details>
+
+
+<details>
+<summary>👉 👤 Perihan Çelikoğlu: VR Uygulamasında Kullanıcı Arayüzü İyileştirmeleri (Açmak için tıklayın)</summary>
+
 UI / UX İyileştirme
 Bu görev kapsamında kullanıcı deneyimini artırmaya yönelik basit ama etkili iyileştirmeler yapılmıştır.
 Yapılanlar:
-Kullanıcıya yönlendirme sağlamak için bilgilendirme metni eklendi
-Etkileşimlerde kullanıcıya geri bildirim vermek için:
-Renk değişimi (hover ve click) kullanıldı
-Bilgi metni sistemi:
-Aç/Kapa (toggle) şeklinde çalışacak şekilde düzenlendi
-Kullanıcının sistemi kolay anlaması için basit ve anlaşılır bir arayüz oluşturuldu
+* Kullanıcıya yönlendirme sağlamak için bilgilendirme metni eklendi
+* Etkileşimlerde kullanıcıya geri bildirim vermek için:
+    * Renk değişimi (hover ve click) kullanıldı
+* Bilgi metni sistemi:
+    * Aç/Kapa (toggle) şeklinde çalışacak şekilde düzenlendi
+* Kullanıcının sistemi kolay anlaması için basit ve anlaşılır bir arayüz oluşturuldu
 
-## 👤 **Shuja Ahmad Tariq:** 
+</details>
+
+
+<details>
+<summary>👉 👤 Shuja Ahmad Tariq: AR Educational Toolkit (Açmak için tıklayın)</summary>
+
 # 📱 AR Educational Toolkit
 ### Augmented Reality Supported Training Application
 
@@ -477,8 +528,15 @@ The core mission of this application is to bridge the gap between static 2D lear
 3.  Ensure the **AR Foundation** package is installed via Package Manager.
 4.  Build to an Android (APK) or iOS (Xcode) device with AR capabilities.
 
+</details>
 
-## 👤 **Shuja Ahmad Tariq:** 
+---
+
+## 4. Hafta (23-30 Nisan)
+
+<details>
+<summary>👉 👤 Shuja Ahmad Tariq: AR Training Module: Interactive Learning & Assessment (Açmak için tıklayın)</summary>
+
 # 🎓 AR Training Module: Interactive Learning & Assessment
 ### Week 4: Pedagogical Layer & User Feedback Systems
 
@@ -546,16 +604,3 @@ public class ARQuizManager : MonoBehaviour
         text.color = color;
     }
 }
-```
-## 4.Hafta (23-30 Nisan)
-
-## 👤 **Burçin Ayyıldız:** Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma
-Bu haftada yapılan görev buraya yapıştırılacak!!
-## 👤 **Burçin Ayyıldız:** AR/VR Projelerinde Performans Optimizasyonu
-Bu haftada yapılan görev buraya yapıştırılacak!!
-
-
-## 👤 **Ahmet Yaman:** Sanal Gerçeklik Ortamında Çoklu Kullanıcı Desteği Entegrasyonu
-Bu haftada yapılan görev buraya yapıştırılacak!!
-## 👤 **Ahmet Yaman:** Artırılmış Gerçeklik Uygulaması için Basit Bir Kullanıcı Arayüzü Tasarımı ve Entegrasyonu
-Bu haftada yapılan görev buraya yapıştırılacak!!
