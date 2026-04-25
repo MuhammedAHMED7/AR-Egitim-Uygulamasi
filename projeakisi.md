@@ -532,8 +532,6 @@ The core mission of this application is to bridge the gap between static 2D lear
 
 ---
 
-## 4. Hafta (23-30 Nisan)
-
 <details>
 <summary>👉 👤 Shuja Ahmad Tariq: AR Training Module: Interactive Learning & Assessment (Açmak için tıklayın)</summary>
 
@@ -604,3 +602,6 @@ public class ARQuizManager : MonoBehaviour
         text.color = color;
     }
 }
+```
+## 4. Hafta (23-30 Nisan)
+<details>
