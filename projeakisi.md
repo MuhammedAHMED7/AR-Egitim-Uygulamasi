@@ -612,11 +612,14 @@ public class ARQuizManager : MonoBehaviour
 
 <summary>👉 👤 **Burçin Ayyıldız:** Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma</summary>
 Bu haftada yapılan görev buraya yapıştırılacak!!
+</details>
 <summary>👉 👤 **Burçin Ayyıldız:** AR/VR Projelerinde Performans Optimizasyonu</summary>
 Bu haftada yapılan görev buraya yapıştırılacak!!
-
+</details>
 
 <summary>👉 👤 **Ahmet Yaman:** Sanal Gerçeklik Ortamında Çoklu Kullanıcı Desteği Entegrasyonu</summary>
 Bu haftada yapılan görev buraya yapıştırılacak!!
+</details>
 <summary>👉 👤 **Ahmet Yaman:** Artırılmış Gerçeklik Uygulaması için Basit Bir Kullanıcı Arayüzü Tasarımı ve Entegrasyonu</summary>
 Bu haftada yapılan görev buraya yapıştırılacak!!
+</details>
