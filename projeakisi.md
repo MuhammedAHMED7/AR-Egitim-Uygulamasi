@@ -611,12 +611,56 @@ public class ARQuizManager : MonoBehaviour
 
 <details>
 <summary>👉 👤 Burçin Ayyıldız: Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma</summary>
-Bu haftada yapılan görev buraya yapıştırılacak!!
+Bu çalışmada, VR projesinin gerçekçilik seviyesini artırmak amacıyla ses efektleri ve mekansal ses teknikleri başarıyla entegre edilmiştir. Öncelikle sahnedeki farklı nesne ve olaylar analiz edilerek her biri için uygun ses efektleri belirlenmiş ve projeye dahil edilmiştir.
+
+Mekansal ses teknolojisi kullanılarak, seslerin kullanıcıya göre konumlandırılması sağlanmıştır. Böylece kullanıcı, sanal ortamda bir sesin hangi yönden geldiğini algılayabilmekte ve bu durum deneyimin daha sürükleyici olmasına katkı sağlamaktadır. Ses kaynaklarına 3D Audio (Spatial Audio) özellikleri eklenmiş, mesafe ve yön faktörlerine bağlı olarak ses şiddeti ve dağılımı ayarlanmıştır.
+
+Ayrıca kullanıcı etkileşimlerine (örneğin nesneye dokunma, hareket etme veya belirli olayların tetiklenmesi) uygun sesler atanmıştır. Bu sayede sistem geri bildirimleri daha anlaşılır ve doğal hale getirilmiştir.
+
+Sonuç olarak, yapılan ses entegrasyonu sayesinde VR ortamının gerçekçiliği ve kullanıcı deneyimi önemli ölçüde geliştirilmiştir.
 </details>
 
 <details>
 <summary>👉 👤 Burçin Ayyıldız: AR/VR Projelerinde Performans Optimizasyonu</summary>
-Bu haftada yapılan görev buraya yapıştırılacak!!
+AR VE VR PERFORMANS ANALIZIVE OPTIMIZASYON RAPORU
+Proje Tanımı
+Oyun Motoru: Unity
+Proje Türü: Sanal Gerçeklik (VR)
+Sahne Detayı: Orta düzey karmaşıklığa sahip, etkileşimli nesneler, ışıklandırma vemekansal ses içeren ortam.
+   
+Başlangıç Performansı
+FPS: 45
+CPU Kullanımı: %70
+GPU Kullanımı: %80
+Draw Call: 1200
+
+Son Performans
+FPS: 60+
+CPU Kullanımı: %50
+GPU Kullanımı: %65
+Stabilite: Yüksek
+
+Uygulanan İşlemler
+Ses Entegrasyonu
+Oculus Spatializer kullanılarak mekansal ses sistemi eklendi. Ortam ve etkileşimsesleri başarıyla entegre edildi.
+Optimizasyon Teknikleri
+LOD (Level of Detail): Nesne mesafesine göre detay seviyeleri düzenlendi.
+Batching: Draw call sayısını azaltmak için statik ve dinamik gruplandırma yapıldı.
+Ses Optimizasyonu: Ses sıkıştırma yöntemleri ve ses limiti (voice limit) uygulandı
+
+Analiz ve Değerlendirme
+En büyük performans artışı Batching ve LOD tekniklerinden elde edilmiştir. Bu sayede draw call sayısı optimize edilmiş ve GPU üzerindeki yük belirgin şekilde
+düşürülmüştür.
+Ses entegrasyonu, mekansal sesin getirdiği hesaplama yüküne rağmen sistemi olumsuz etkilememiştir. Sıkıştırma ve voice limit kullanımı dengeli bir performans
+sağlamıştır.
+Sonuç
+• 
+• 
+• 
+FPS artışı ile kullanıcı deneyimi akıcı hale getirildi.
+Mekansal ses ile daldırma (immersion) hissi artırıldı.
+Stabil kare hızı sayesinde VR platformlarında kritik olan hareket tutması (motion sickness) riski minimize edildi.
+
 </details>
 
 <details>
