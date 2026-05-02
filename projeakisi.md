@@ -671,4 +671,116 @@ Bu haftada yapılan görev buraya yapıştırılacak!!
 <details>
 <summary>👉 👤 Ahmet Yaman: Artırılmış Gerçeklik Uygulaması için Basit Bir Kullanıcı Arayüzü Tasarımı ve Entegrasyonu</summary>
 Bu haftada yapılan görev buraya yapıştırılacak!!
+
+   # AR Kullanıcı Arayüzü Tasarım Raporu
+
+**Proje:** Unity AR Arayüzü  
+**Teknoloji:** Unity 2022.3 LTS · AR Foundation 5.x · ARKit / ARCore  
+**Tarih:** Mayıs 2026
+
+---
+
+## 1. Genel Bakış
+
+Bu rapor, artırılmış gerçeklik (AR) ortamında çalışan bir kullanıcı arayüzünün tasarım kararlarını, bileşen mimarisini ve teknik entegrasyon sürecini özetlemektedir. Arayüz; model seçimi, sistem ayarları ve temel nesne kontrollerini kapsayan, sezgisel ve düşük bilişsel yüklü bir deneyim sunmak amacıyla geliştirilmiştir.
+
+---
+
+## 2. Tasarım Prensipleri
+
+Arayüz üç temel prensip üzerine inşa edilmiştir.
+
+**Uzamsal Dürüstlük:** Kullanıcının fiziksel çevreyi görmesini engelleyen hiçbir UI elemanı ekran merkezini kapatmaz. Tüm kalıcı kontroller ekranın kenar bölgelerine yerleştirilmiştir.
+
+**İki Katmanlı Mimari:** Screen Space ve World Space paradigmaları birbirini tamamlayacak şekilde kullanılmıştır. Navigasyon ve ayar kontrolleri Screen Space'te (ekrana sabit), nesneye özel kontroller ise World Space'te (3D dünyada) konumlandırılmıştır.
+
+**Aşamalı İfşa:** Kullanıcı yalnızca o an ihtiyaç duyduğu bilgiyle karşılaşır. Onboarding, ayarlar ve bağlamsal kontroller gerektiğinde açılıp kapanır.
+
+---
+
+## 3. Arayüz Bileşenleri
+
+### 3.1 Screen Space — Ekrana Sabit Katman
+
+**HUD Üst Bar** ekranın tepesinde yer alır ve seçili modelin adını ile ayarlar butonunu (⚙) gösterir. AR oturum durumu yeşil yanıp sönen nokta ile anlık olarak iletilir.
+
+**Carousel Model Seçici** ekranın alt bölümünde, başparmakla kolayca erişilebilen "Thumb Zone" alanında konumlanır. Yatay kaydırmalı yapısı sayesinde kamera görüntüsünü dikey eksende boğmaz. Seçilen model kartı renk ve boyut değişimiyle anlık görsel geri bildirim verir.
+
+**Aksiyon Satırı** Carousel'in hemen altında üç butonu barındırır: Ses Komutu, Yerleştir ve Sıfırla.
+
+**Ayarlar Paneli** ⚙ butonuyla açılan glassmorphism estetiğinde bir kaplama olarak gelir. Işık tahmini, oklüzyon, uzamsal ses ve ses komutu toggle'ları ile beş kademeli render kalitesi slider'ı içerir. Açıkken arka plan kamerası tamamen kapanmaz; fiziksel dünya ile bağlantı korunur.
+
+### 3.2 World Space — 3D Dünyaya Gömülü Katman
+
+Bir model sahnede yerleştirildiğinde, modelin yanında 3D uzayda asılı duran bir kontrol paneli belirir. Bu panel dört işlevi destekler: döndürme, büyütme, küçültme ve silme. Panel, kullanıcı modelin etrafında yürürken de okunabilir kalmak için her zaman AR kamerasına döner (billboard mekanizması).
+
+### 3.3 Onboarding ve Kalibrasyon
+
+Uygulama açıldığında ekranda tek seferlik bir zemin tarama rehberi görünür. "Kameranızı yavaşça hareket ettirin" gibi eyleme yönelik açıklamalar sunulur; jenerik hata mesajları yerine kullanıcıya neyin yanlış gittiği ve nasıl düzelteceği söylenir. Zemin tespit edilince progress bar tamamlanır ve kullanıcı "Başlat" butonuyla deneyime geçer.
+
+### 3.4 Bildirim Sistemi
+
+Her kullanıcı eylemi ekranın üst bölümünde kısa bir bildirimle doğrulanır. Bildirimler fade-in / fade-out animasyonuyla 2 saniye sonra kaybolur ve birbirini ezmez; yeni bir bildirim öncekini iptal ederek görünür.
+
+---
+
+## 4. Etkileşim Modelleri
+
+| Eylem | Yöntem |
+|---|---|
+| Model seçme | Carousel'de tek dokunuş |
+| Model yerleştirme | "Yerleştir" butonu, zemin reticle üzerinde |
+| Boyutlandırma | İki parmak pinch-to-zoom |
+| Döndürme | İki parmak rotasyon jesti |
+| Nesne kontrolü | World Space panel butonları |
+| Ses komutu | Mikrofon butonu → NLP simülasyonu |
+| Ayarlar | FAB (⚙) → Glassmorphism panel |
+
+---
+
+## 5. Teknik Yığın
+
+```
+Unity 2022.3 LTS
+├── AR Foundation 5.x
+│   ├── ARRaycastManager   — zemin tespiti
+│   ├── ARPlaneManager     — düzlem haritalama
+│   ├── ARCameraManager    — ışık tahmini
+│   └── AROcclusionManager — kişi oklüzyonu
+├── TextMeshPro            — UI tipografisi
+└── Unity UI (UGUI)        — tüm arayüz bileşenleri
+```
+
+**Script Mimarisi:**
+
+- `ARUIManager.cs` — merkezi koordinatör, tüm bileşenler arası iletişim
+- `CarouselItem.cs` — tekrarlanabilir model kartı bileşeni
+- `SettingsManager.cs` — AR Foundation API bağlantılı ayar yönetimi
+- `TouchGestureController.cs` — çok dokunuşlu jest algılama
+- `ReticleController.cs` — zemin hedefleyici ve yüzey geri bildirimi
+
+---
+
+## 6. Test Senaryoları
+
+Arayüzün doğrulanması için üç ortam koşulunda test yapılması önerilir.
+
+**İdeal koşul:** İyi aydınlatılmış, düz dokulu zemin. Tüm bileşenlerin temel işlevleri burada doğrulanır.
+
+**Düşük ışık:** Karanlık ortamda ışık tahmini toggle'ının davranışı ve kalibrasyon yönergelerinin etkinliği gözlemlenir.
+
+**Hareketli ortam:** Kullanıcı modelin etrafında yürürken World Space panelin billboard davranışı ve okunabilirliği test edilir.
+
+---
+
+## 7. Bilinen Kısıtlamalar
+
+Ses komutu şu an simülasyon modunda çalışmaktadır; gerçek NLP entegrasyonu için Unity Sentis veya platform yerel API'lerinin (SpeechRecognizer / SFSpeechRecognizer) bağlanması gerekir. Pinch ve döndürme jestleri aynı anda kullanıldığında küçük öncelik çakışmaları yaşanabilir; bu durum gesture threshold değerlerinin hassas ayarlanmasıyla giderilebilir.
+
+---
+
+## 8. Sonuç
+
+Geliştirilen arayüz, fiziksel dünyayla çatışmayan, bağlama duyarlı ve katmanlı bir AR deneyimi sunmaktadır. Screen Space ile World Space arasındaki bilinçli denge, kullanıcının hem navigasyona hem de yerleştirilen nesneye olan dikkatini verimli şekilde yönetir. LeanTween gibi üçüncü parti bağımlılıklar bilinçli olarak dışarıda bırakılmış; tüm sistem yalnızca Unity'nin yerleşik bileşenleri ve AR Foundation üzerine inşa edilmiştir.
+
 </details>
