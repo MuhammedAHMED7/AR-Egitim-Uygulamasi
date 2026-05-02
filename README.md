@@ -45,3 +45,8 @@ Projenin amacı, eğitim materyallerini artırılmış gerçeklik (AR) teknoloji
 - VR Uygulamasında Kullanıcı Arayüzü İyileştirmeleri
 
 
+## 🗓️ Mevcut Durum (4. Hafta)
+- Sanal Gerçeklik Projesi için Ses Entegrasyonu ve Mekansal Ses Deneyimi Oluşturma
+- AR/VR Projelerinde Performans Optimizasyonu
+- Artırılmış Gerçeklik Uygulaması için Basit Bir Kullanıcı Arayüzü Tasarımı ve Entegrasyonu
+- Sanal Gerçeklik Ortamında Çoklu Kullanıcı Desteği Entegrasyonu
