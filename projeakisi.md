@@ -58,7 +58,7 @@ Mobil cihazlarda akıcı performans sağlamak için "Low-Poly" (Düşük Poligon
     * **Shaderlar:** Mobil cihazlar için optimize edilmiş "Lit" veya "Unlit" shaderlar.
 
 ### 3.3 Temel Teknoloji Yığını
-* **Motor:** Unity 6 (2023 LTS veya daha yenisi).
+* **Motor:** Unity(2022 LTS ).
 * **Programlama:** C# (.NET Standard 2.1).
 * **Versiyon Kontrolü:** Git + Git LFS (Büyük Dosya Desteği).
 
