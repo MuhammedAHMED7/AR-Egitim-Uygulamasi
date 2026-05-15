@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: LessonImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5080124934930565456
+  m_GuidHigh: 17051669931360735659
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4694822665522704765
+      m_GuidHigh: 17927753251084930216
+    m_SerializedTextureGuid:
+      m_GuidLow: 2370300745535870397
+      m_GuidHigh: 9101741959199282425
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: marker_ders
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5365441096820163873
+      m_GuidHigh: 4285090375657121951
+    m_SerializedTextureGuid:
+      m_GuidLow: 5365122758230307722
+      m_GuidHigh: 11516237038147676312
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: marker_kamera
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4885854253825469602
+      m_GuidHigh: 1902449298481148849
+    m_SerializedTextureGuid:
+      m_GuidLow: 13773306632688729544
+      m_GuidHigh: 12431917323863412299
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: marker_profil
+    m_Texture: {fileID: 0}
