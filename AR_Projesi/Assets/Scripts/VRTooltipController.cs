@@ -1,63 +1,119 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace AREgitim.VR
 {
     /// <summary>
-    /// Lazerin gösterdiği obje üzerinde küçük bir bilgi balonu gösterir.
-    /// VRRayHoverHinter veya başka scriptler bunu çağırabilir.
+    /// Bir kumandanın hemen üstünde duran küçük ipucu paneli.
+    /// Bağlama göre kısa metin gösterir (örn. "Trigger: Tut", "A: Menü").
+    /// Kullanıcı yeni eylemleri öğrenirken kumandaya baktığında görünür.
+    ///
+    /// Bootstrapper bunu her kumandaya çocuk olarak yerleştirir; uzaklık ve
+    /// dönüş offset'i ayarlanabilir.
     /// </summary>
     public class VRTooltipController : MonoBehaviour
     {
-        [Header("Bağlantılar")]
-        public CanvasGroup canvasGroup;
-        public Text label;
-        public Transform headTransform;
+        [Header("Görünürlük")]
+        [Tooltip("İpucu sadece kullanıcı kumandaya bakıyorsa görünür mü?")]
+        public bool onlyWhenLookedAt = true;
 
-        [Header("Davranış")]
-        [Tooltip("Tooltip her zaman kameraya bakar (billboard)")]
-        public bool billboard = true;
+        [Tooltip("Bakış açısı eşiği (dot product). Yüksek = daha keskin bakış gerekir.")]
+        [Range(0f, 1f)] public float lookDotThreshold = 0.55f;
 
-        [Range(1f, 20f)] public float fadeSpeed = 12f;
-        [Tooltip("Tooltip dünyada hedef konumun üstünde gösterilir (metre).")]
-        public float verticalOffset = 0.15f;
+        [Tooltip("İpucu mesajı bu süre boyunca üzerinde fareyle durulmazsa solar.")]
+        public float autoHideAfter = 6f;
 
-        private bool _visible;
-        private float _targetAlpha;
+        [Header("İçerik")]
+        [TextArea] public string defaultMessage = "Trigger: Seç  •  Grip: Tut";
 
-        private void Awake()
+        CanvasGroup _canvasGroup;
+        TextMeshProUGUI _text;
+        Transform _head;
+        float _timeShown;
+        bool _muted;
+
+        protected void Awake()
         {
-            if (canvasGroup != null) canvasGroup.alpha = 0f;
+            _canvasGroup = GetComponent<CanvasGroup>();
+            if (_canvasGroup == null) _canvasGroup = gameObject.AddComponent<CanvasGroup>();
+            _canvasGroup.alpha = 0f;
+            _canvasGroup.blocksRaycasts = false;
+            _canvasGroup.interactable = false;
+            Build();
         }
 
-        private void LateUpdate()
+        void Start()
         {
-            if (canvasGroup != null)
+            if (VRUIManager.Instance != null)
+                _head = VRUIManager.Instance.headTransform;
+            if (_head == null && Camera.main != null) _head = Camera.main.transform;
+            _timeShown = Time.unscaledTime;
+        }
+
+        void LateUpdate()
+        {
+            if (_head == null || _muted)
             {
-                canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, _targetAlpha,
-                    Time.deltaTime * fadeSpeed);
+                _canvasGroup.alpha = Mathf.Lerp(_canvasGroup.alpha, 0f, Time.unscaledDeltaTime * 6f);
+                return;
             }
 
-            if (billboard && headTransform != null && _visible)
+            // Otomatik gizleme süresi geçti mi?
+            bool timedOut = (Time.unscaledTime - _timeShown) > autoHideAfter;
+
+            float target = 1f;
+            if (onlyWhenLookedAt)
             {
-                Vector3 dir = transform.position - headTransform.position;
-                if (dir.sqrMagnitude > 0.001f)
-                    transform.rotation = Quaternion.LookRotation(dir);
+                Vector3 toController = (transform.position - _head.position).normalized;
+                float dot = Vector3.Dot(_head.forward, toController);
+                target = dot >= lookDotThreshold ? 1f : 0f;
             }
+            if (timedOut) target = 0f;
+
+            // Herhangi bir UI paneli açıksa kapat — odak dağıtmasın
+            if (VRUIManager.Instance != null && VRUIManager.Instance.IsAnyPanelOpen)
+                target = 0f;
+
+            _canvasGroup.alpha = Mathf.Lerp(_canvasGroup.alpha, target,
+                                            Time.unscaledDeltaTime * 8f);
         }
 
-        public void Show(string text, Vector3 worldPos)
+        public void SetMessage(string msg)
         {
-            if (label != null) label.text = text;
-            transform.position = worldPos + Vector3.up * verticalOffset;
-            _visible = true;
-            _targetAlpha = 1f;
+            if (_text != null) _text.text = msg;
+            _timeShown = Time.unscaledTime;
         }
 
-        public void Hide()
+        /// <summary>Tooltip'i tamamen kapat — başka bir UI açıkken vb.</summary>
+        public void Mute(bool mute)
         {
-            _visible = false;
-            _targetAlpha = 0f;
+            _muted = mute;
+        }
+
+        public void ResetShowTimer()
+        {
+            _timeShown = Time.unscaledTime;
+        }
+
+        void Build()
+        {
+            VRUIFactory.CreatePanelBackground(transform, VRUITheme.PanelBackgroundDim);
+
+            var msgGO = new GameObject("Message", typeof(RectTransform));
+            msgGO.transform.SetParent(transform, false);
+            var rt = (RectTransform)msgGO.transform;
+            rt.anchorMin = Vector2.zero;
+            rt.anchorMax = Vector2.one;
+            rt.offsetMin = new Vector2(12, 8);
+            rt.offsetMax = new Vector2(-12, -8);
+            _text = msgGO.AddComponent<TextMeshProUGUI>();
+            _text.text = defaultMessage;
+            _text.fontSize = VRUITheme.FontTooltip;
+            _text.color = VRUITheme.TextPrimary;
+            _text.alignment = TextAlignmentOptions.Center;
+            _text.enableWordWrapping = true;
+            _text.raycastTarget = false;
         }
     }
 }
