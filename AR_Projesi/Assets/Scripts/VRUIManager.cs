@@ -5,44 +5,57 @@ using UnityEngine;
 namespace AREgitim.VR
 {
     /// <summary>
-    /// VR arayüzünün merkezi koordinatörü. Sahnede sadece bir tane bulunur ve
-    /// VRSceneBootstrapper tarafından (veya VRUIBootstrapper tarafından) kurulur.
-    /// Tüm panel açma/kapama, tooltip, toast ve odak yönetimi buradan geçer.
+    /// VR Kullanıcı Arayüzü Merkezi Koordinatörü. Singleton.
+    /// Tüm VR UI bileşenleri arasındaki iletişimi yönetir, panellerin
+    /// gösterim/gizleme durumunu izler, olay yayını yapar.
+    ///
+    /// VRInteractionManager hareket/etkileşim mantığını;
+    /// VRUIManager ise arayüz görünürlüğünü ve kullanıcı geri bildirimini yönetir.
     /// </summary>
-    [DefaultExecutionOrder(-50)]
     public class VRUIManager : MonoBehaviour
     {
         public static VRUIManager Instance { get; private set; }
 
-        [Header("Referanslar (Bootstrapper tarafından doldurulur)")]
-        public Transform headTransform;          // XR Origin -> Camera
+        // ───────── Olaylar ─────────
+        public event Action<bool> OnMainMenuToggled;
+        public event Action<bool> OnSettingsToggled;
+        public event Action<bool> OnHelpToggled;
+        public event Action OnExitRequested;
+        public event Action OnRecenterRequested;
+
+        // ───────── Referanslar (Bootstrapper tarafından atanır) ─────────
+        [Header("UI Bileşenleri (runtime'da atanır)")]
+        public VRWristMenu wristMenu;
+        public VRMainMenuPanel mainMenu;
+        public VRSettingsPanel settingsPanel;
+        public VRNotificationController notifications;
+        public VRTooltipController leftTooltip;
+        public VRTooltipController rightTooltip;
+        public VRRadialMenu radialMenu;
+        public VRPointerVisuals leftPointerVisuals;
+        public VRPointerVisuals rightPointerVisuals;
+        public VRHelpPanel helpPanel;
+
+        [Header("Sahne referansları")]
+        public Transform headTransform;          // VR kamerası — yön referansı
         public Transform leftControllerTransform;
         public Transform rightControllerTransform;
 
-        [Header("UI Yüzeyleri")]
-        public VRWristMenu wristMenu;            // Sol kumandadaki menü
-        public VRMainMenuPanel mainMenuPanel;    // Ana menü (orta floating)
-        public VRSettingsPanel settingsPanel;    // Ayarlar paneli
-        public VRInfoPanel infoPanel;            // Bilgi/yardım paneli
-        public VRToastController toast;          // Sağ üst geçici mesajlar
-        public VRTooltipController tooltip;      // Hover tooltip'leri
+        // ───────── Durum ─────────
+        public bool IsMainMenuOpen { get; private set; }
+        public bool IsSettingsOpen { get; private set; }
+        public bool IsHelpOpen { get; private set; }
+        public bool IsAnyPanelOpen => IsMainMenuOpen || IsSettingsOpen || IsHelpOpen;
 
-        [Header("Davranış Ayarları")]
-        [Tooltip("Floating panellerin kullanıcıya olan mesafesi (metre)")]
-        public float panelDistance = 1.5f;
+        // Onboarding ipuçları sadece bir kez gösterilsin
+        const string K_TIPS_SHOWN = "vr_tips_shown";
+        public bool HasShownInitialTips
+        {
+            get => PlayerPrefs.GetInt(K_TIPS_SHOWN, 0) == 1;
+            set { PlayerPrefs.SetInt(K_TIPS_SHOWN, value ? 1 : 0); PlayerPrefs.Save(); }
+        }
 
-        [Tooltip("Paneller kullanıcının başını her zaman takip etsin mi?")]
-        public bool panelsFollowHead = false;
-
-        [Tooltip("Panel boyunca yumuşatma katsayısı (büyüdükçe daha yavaş)")]
-        [Range(0.5f, 10f)] public float followSmoothing = 4f;
-
-        private readonly List<VRFloatingPanel> _activePanels = new List<VRFloatingPanel>();
-
-        public event Action<VRFloatingPanel> OnPanelOpened;
-        public event Action<VRFloatingPanel> OnPanelClosed;
-
-        private void Awake()
+        void Awake()
         {
             if (Instance != null && Instance != this)
             {
@@ -52,119 +65,177 @@ namespace AREgitim.VR
             Instance = this;
         }
 
-        private void OnDestroy()
+        void Start()
         {
+            // Etkileşim olaylarını dinle — kullanıcıya geri bildirim sağla
+            VRInteractionManager.OnObjectGrabbed += HandleObjectGrabbed;
+            VRInteractionManager.OnObjectReleased += HandleObjectReleased;
+            VRInteractionManager.OnObjectUsed += HandleObjectUsed;
+            VRInteractionManager.OnMovementModeChanged += HandleMovementModeChanged;
+
+            // İlk açılışta yardım ipuçlarını göster
+            if (!HasShownInitialTips && notifications != null)
+            {
+                // Biraz gecikme — kullanıcı sahnenin yüklendiğini hissetsin
+                Invoke(nameof(ShowWelcomeTips), 1.0f);
+            }
+        }
+
+        void OnDestroy()
+        {
+            VRInteractionManager.OnObjectGrabbed -= HandleObjectGrabbed;
+            VRInteractionManager.OnObjectReleased -= HandleObjectReleased;
+            VRInteractionManager.OnObjectUsed -= HandleObjectUsed;
+            VRInteractionManager.OnMovementModeChanged -= HandleMovementModeChanged;
             if (Instance == this) Instance = null;
         }
 
-        private void LateUpdate()
+        // ───────── Panel kontrolü ─────────
+        public void ToggleMainMenu()
         {
-            if (!panelsFollowHead || headTransform == null) return;
+            if (IsMainMenuOpen) CloseMainMenu();
+            else OpenMainMenu();
+        }
 
-            foreach (var panel in _activePanels)
+        public void OpenMainMenu()
+        {
+            if (IsMainMenuOpen) return;
+            // Diğer panelleri kapat — sadece bir tane görünür kalsın
+            CloseSettings();
+            CloseHelp();
+
+            IsMainMenuOpen = true;
+            if (mainMenu != null)
             {
-                if (panel == null || !panel.isActiveAndEnabled) continue;
-                if (!panel.followHead) continue;
-
-                Vector3 forward = headTransform.forward;
-                forward.y = 0f;
-                if (forward.sqrMagnitude < 0.001f) continue;
-                forward.Normalize();
-
-                Vector3 targetPos = headTransform.position + forward * panelDistance;
-                targetPos.y = headTransform.position.y + panel.verticalOffset;
-
-                panel.transform.position = Vector3.Lerp(panel.transform.position, targetPos,
-                    Time.deltaTime * followSmoothing);
-
-                Vector3 lookDir = panel.transform.position - headTransform.position;
-                lookDir.y = 0f;
-                if (lookDir.sqrMagnitude > 0.001f)
-                {
-                    Quaternion targetRot = Quaternion.LookRotation(lookDir);
-                    panel.transform.rotation = Quaternion.Slerp(panel.transform.rotation,
-                        targetRot, Time.deltaTime * followSmoothing);
-                }
+                mainMenu.PositionInFrontOfUser();
+                mainMenu.Show();
             }
+            OnMainMenuToggled?.Invoke(true);
         }
 
-        /// <summary>Paneli kullanıcının önünde uygun mesafede konumlandırır ve açar.</summary>
-        public void OpenPanel(VRFloatingPanel panel, bool inFrontOfUser = true)
+        public void CloseMainMenu()
         {
-            if (panel == null) return;
+            if (!IsMainMenuOpen) return;
+            IsMainMenuOpen = false;
+            if (mainMenu != null) mainMenu.Hide();
+            OnMainMenuToggled?.Invoke(false);
+        }
 
-            if (inFrontOfUser && headTransform != null)
+        public void OpenSettings()
+        {
+            CloseMainMenu();
+            CloseHelp();
+            IsSettingsOpen = true;
+            if (settingsPanel != null)
             {
-                PositionInFrontOfUser(panel.transform, panelDistance, panel.verticalOffset);
+                settingsPanel.PositionInFrontOfUser();
+                settingsPanel.Show();
+                settingsPanel.RefreshFromManager();
             }
-
-            panel.gameObject.SetActive(true);
-            panel.OnPanelOpened();
-
-            if (!_activePanels.Contains(panel))
-                _activePanels.Add(panel);
-
-            OnPanelOpened?.Invoke(panel);
+            OnSettingsToggled?.Invoke(true);
         }
 
-        public void ClosePanel(VRFloatingPanel panel)
+        public void CloseSettings()
         {
-            if (panel == null) return;
-            panel.OnPanelClosed();
-            panel.gameObject.SetActive(false);
-            _activePanels.Remove(panel);
-            OnPanelClosed?.Invoke(panel);
+            if (!IsSettingsOpen) return;
+            IsSettingsOpen = false;
+            if (settingsPanel != null) settingsPanel.Hide();
+            OnSettingsToggled?.Invoke(false);
         }
 
-        public void TogglePanel(VRFloatingPanel panel)
+        public void OpenHelp()
         {
-            if (panel == null) return;
-            if (panel.gameObject.activeSelf) ClosePanel(panel);
-            else OpenPanel(panel);
+            CloseMainMenu();
+            CloseSettings();
+            IsHelpOpen = true;
+            if (helpPanel != null)
+            {
+                helpPanel.PositionInFrontOfUser();
+                helpPanel.Show();
+            }
+            OnHelpToggled?.Invoke(true);
         }
 
-        public void CloseAllPanels()
+        public void CloseHelp()
         {
-            // Listeyi kopyalayıp döndür, çünkü ClosePanel listeyi değiştirir.
-            var copy = _activePanels.ToArray();
-            foreach (var p in copy) ClosePanel(p);
+            if (!IsHelpOpen) return;
+            IsHelpOpen = false;
+            if (helpPanel != null) helpPanel.Hide();
+            OnHelpToggled?.Invoke(false);
         }
 
-        /// <summary>Bir transform'u kullanıcının önünde, ona bakacak şekilde konumlar.</summary>
-        public void PositionInFrontOfUser(Transform t, float distance, float verticalOffset)
+        public void RequestExit()
         {
-            if (headTransform == null || t == null) return;
-
-            Vector3 forward = headTransform.forward;
-            forward.y = 0f;
-            if (forward.sqrMagnitude < 0.001f) forward = Vector3.forward;
-            forward.Normalize();
-
-            t.position = headTransform.position + forward * distance + Vector3.up * verticalOffset;
-
-            Vector3 lookDir = t.position - headTransform.position;
-            lookDir.y = 0f;
-            if (lookDir.sqrMagnitude > 0.001f)
-                t.rotation = Quaternion.LookRotation(lookDir);
+            OnExitRequested?.Invoke();
+            ShowNotification("Uygulamadan çıkılıyor…", VRNotificationController.NotificationType.Info);
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         }
 
-        // ---- Kısa yollar (HUD'dan ve diğer scriptlerden çağrılır) ----
-
-        public void ShowToast(string message, float duration = 2.5f, ToastType type = ToastType.Info)
+        public void RequestRecenter()
         {
-            if (toast != null) toast.Show(message, duration, type);
+            OnRecenterRequested?.Invoke();
+            ShowNotification("Görüş yeniden ortalandı", VRNotificationController.NotificationType.Success);
         }
 
-        public void ShowTooltip(string text, Vector3 worldPos)
+        // ───────── Bildirim Yardımcıları ─────────
+        public void ShowNotification(string message, VRNotificationController.NotificationType type = VRNotificationController.NotificationType.Info)
         {
-            if (tooltip != null) tooltip.Show(text, worldPos);
+            if (notifications != null) notifications.Show(message, type);
         }
 
-        public void HideTooltip()
+        // ───────── Etkileşim olaylarını yakala — UI geri bildirimi üret ─────────
+        void HandleObjectGrabbed(VRGrabbable obj)
         {
-            if (tooltip != null) tooltip.Hide();
+            if (obj == null) return;
+            ShowNotification($"{obj.displayName} tutuldu", VRNotificationController.NotificationType.Info);
+            if (!string.IsNullOrEmpty(obj.grabHint))
+                ShowNotification(obj.grabHint, VRNotificationController.NotificationType.Hint);
+        }
+
+        void HandleObjectReleased(VRGrabbable obj)
+        {
+            // Çok sık olduğu için bildirim yok — sessiz ol
+        }
+
+        void HandleObjectUsed(VRGrabbable obj)
+        {
+            if (obj == null) return;
+            ShowNotification($"{obj.displayName} kullanıldı", VRNotificationController.NotificationType.Success);
+        }
+
+        void HandleMovementModeChanged(VRInteractionManager.MovementMode mode)
+        {
+            string label = mode switch
+            {
+                VRInteractionManager.MovementMode.Teleport => "Hareket modu: Işınlanma",
+                VRInteractionManager.MovementMode.Continuous => "Hareket modu: Sürekli",
+                VRInteractionManager.MovementMode.Both => "Hareket modu: Karışık",
+                _ => "Hareket modu güncellendi"
+            };
+            ShowNotification(label, VRNotificationController.NotificationType.Info);
+        }
+
+        void ShowWelcomeTips()
+        {
+            ShowNotification("AR Eğitim VR'a hoş geldin", VRNotificationController.NotificationType.Success);
+            // Birkaç saniye sonra ikinci ipucu
+            Invoke(nameof(ShowMenuTip), 3.5f);
+        }
+
+        void ShowMenuTip()
+        {
+            ShowNotification("Menüyü açmak için Menu (sol) düğmesine bas", VRNotificationController.NotificationType.Hint);
+            Invoke(nameof(ShowWristTip), 4f);
+        }
+
+        void ShowWristTip()
+        {
+            ShowNotification("Hızlı erişim: sol bileği çevir", VRNotificationController.NotificationType.Hint);
+            HasShownInitialTips = true;
         }
     }
-
-    public enum ToastType { Info, Success, Warning, Error }
 }
