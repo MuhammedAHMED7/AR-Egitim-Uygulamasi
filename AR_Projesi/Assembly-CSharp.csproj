@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\ReticleController.cs" />
     <Compile Include="Assets\Scripts\NotificationController.cs" />
     <Compile Include="Assets\Scripts\ARUIManager.cs" />
+    <Compile Include="Assets\Scripts\CellInteraction.cs" />
     <Compile Include="Assets\Scripts\QuizManager.cs" />
     <Compile Include="Assets\Scripts\CarouselItem.cs" />
     <Compile Include="Assets\Scripts\CarouselController.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\TouchGestureController.cs" />
     <Compile Include="Assets\Scripts\ModelPlacementController.cs" />
+    <Compile Include="Assets\Scripts\TapToPlace.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -443,6 +445,14 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.6\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\PlaybackEngines\VisionOSPlayer\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\PlaybackEngines\VisionOSPlayer\UnityEditor.iOS.Extensions.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">
