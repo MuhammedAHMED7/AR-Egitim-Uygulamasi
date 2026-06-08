@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7c827c8f9e8e4438e7056247653ec8, type: 3}
+  m_Name: Data_Chemistry_Atom
+  m_EditorClassIdentifier: 
+  title: "\xC7ekirdek(Nucleus)"
+  concept: "Kimya/Atom Yap\u0131s\u0131"
+  description: "Atomun merkezinde yer alan, proton ve n\xF6tronlardan olu\u015Fan,
+    hacmi k\xFC\xE7\xFCk fakat k\xFCtlesi atomun neredeyse tamam\u0131n\u0131 olu\u015Fturan
+    b\xF6l\xFCmd\xFCr."
